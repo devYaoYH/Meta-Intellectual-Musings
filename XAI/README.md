@@ -18,7 +18,37 @@ The current rate at which AI gains competence vastly outstrips the rate at which
 
 From the above DARPA definition of XAI, we can extract two broad thrusts of the movement:
 
-1. 
-2. 
+1. Develop tools to interact intelligibly with AI models
+2. Bake into AI models an awareness of its internal processes
 
-Furthermore, it highlights some general approaches to 
+Furthermore, it highlights some general approaches to achieving these goals:
+
+1. Produce [text-based] explanations alongside model output
+2. Identify limits of AI models when guarantees break down
+3. Predict model behavior for novel test data
+
+Given the broad overview of what, why and how XAI is conducted, we will next examine instances where AI models require improved explanability as well as what are the current products from the XAI movement.
+
+# What require explaining? - When Models Fail
+
+# XAI State-of-the-Art (SotA)
+
+# What is an Explanation? - Perspectives from Philosophy
+
+# Where Philosophy can help XAI
+
+# Distinguishing between Diagnostics and Explanation
+
+# Explanations exist outside AI Models
+
+# Current tools of Command Responsibility
+
+# XAI not merely as a way of looking back, but looking forwards
+
+XAI does not only serve the purpose of examining presently available systems in an effort to *make sense of* how and why they function but could further serve the purpose of pushing us towards truely intelligent systems. [Rosenberg ratiocinative constraint here]
+
+# The Future of XAI
+
+# References
+
+1. 
