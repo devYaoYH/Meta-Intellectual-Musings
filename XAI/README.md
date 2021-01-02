@@ -53,7 +53,16 @@ There are general issues pertaining to these classes of AI models which requires
 
 # XAI State-of-the-Art (SotA)
 
-![Selective Attention](/XAI/img/figure2_selective_attention.gif)
+## Tracing important parameters through model
+
+## Attending to specific regions of input
+
+<p align="center">
+  <img src="/XAI/img/figure2_selective_attention.gif">
+</p>
+<p align="center"><strong>Figure 2:</strong> Overlay of selected input regions model attends to <a href="https://ai.googleblog.com/2020/06/using-selective-attention-in.html">Source</a></p>
+
+## Learning to provide explanatory [text]
 
 # What is an Explanation? - Perspectives from Philosophy
 
@@ -73,4 +82,10 @@ XAI does not only serve the purpose of examining presently available systems in 
 
 # References
 
-1. 
+1. [AlphaFold] https://www.nature.com/articles/d41586-020-03348-4
+2. [3-Body Problem ANN simulation] https://arxiv.org/pdf/1910.07291.pdf
+3. [panda-gibbon image adversary] https://openai.com/blog/adversarial-example-research/
+4. [racist twitter chatbot] https://www.theverge.com/2016/3/24/11297050/tay-microsoft-chatbot-racist
+5. [RL goalie adversarial attack] https://bair.berkeley.edu/blog/2020/03/27/attacks/
+6. [Selective Attention Agent] https://ai.googleblog.com/2020/06/using-selective-attention-in.html
+7. [Command Responsibility Doctrine] https://www.oxfordbibliographies.com/view/document/obo-9780199796953/obo-9780199796953-0088.xml
