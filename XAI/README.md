@@ -35,12 +35,18 @@ Present AI models fall broadly into 4 categories: Classification, Generation, Pr
 
 There are general issues pertaining to these classes of AI models which requires us to provide an explanation for their output. For a classification or generation model using deep neural networks, nowhere can we find explicit rules that govern the decision processes leading to their outputs. Similarly, when prediction results deviate from empirical findings, an explanation is warranted as to why there is this difference which could help in corrective measures to further improve results. Searching assumes that one has a good fit for the value function utilized in assessing actions and states which is not guaranteed. In addition, there is the ugly issue of the Value Alignment Problem: how can we ensure that AI holds our values in its best interest? Below, we shall outline a few examples of such issues in recent literature.
 
+## The case of the misidentified panda
+
 <p align="center">
   <img src="/XAI/img/figure1_panda_gibbon.png">
 </p>
-<p align="center"><strong>Figure 1:</strong> Panda obfusicated with noise produces Gibbon.</p>
+<p align="center"><strong>Figure 1:</strong> Panda obfusicated with noise produces Gibbon. <a href="https://openai.com/blog/adversarial-example-research/">Source</a></p>
+
+## The case of the inappropriate chatbot
 
 [Microsoft's AI chatbot producing racist tweets](https://www.theverge.com/2016/3/24/11297050/tay-microsoft-chatbot-racist)
+
+## The case of the spasmodic goalie
 
 [Adversarial attacks on RL agents](https://bair.berkeley.edu/blog/2020/03/27/attacks/)
 
