@@ -24,14 +24,26 @@ From the above DARPA definition of XAI, we can extract two broad thrusts of the 
 Furthermore, it highlights some general approaches to achieving these goals:
 
 1. Produce [text-based] explanations alongside model output
-2. Identify limits of AI models when guarantees break down
+2. Identify limits of AI models (when guarantees break down)
 3. Predict model behavior for novel test data
 
-Given the broad overview of what, why and how XAI is conducted, we will next examine instances where AI models require improved explanability as well as what are the current products from the XAI movement.
+Given the broad overview of what, why and how XAI is conducted, we will next examine instances where AI models require explanations as well as what are the current products from the XAI movement.
 
 # What require explaining? - When Models Fail
 
+Present AI models fall broadly into 4 categories: Classification, Generation, Simulation, and Search. Classification models are predominantly implemented with Convolutional Neural Networks (CNNs), and generative models are the flip side of classification. Rather than extracting a set of hidden features from the input to seperate the set of given inputs to some set of output labels (think of image classification), generative models such as Generative Adversarial Networks (GAN) fills in the gaps and produces output similar to inputs given some hidden set of features (think of GPT-2/3 and Deepfake). Simulation models propagate forward some state over time given rules and initial parameters. Examples include the recent success of DeepMind's protein folding simulation as well as neural network simulations of solutions to three-body problems in physics. Search models see widespread use in Game-Playing agents such as AlphaGo and the venerable DeepBlue chess AI. These typically explore and assess actions with an value function in mind to optimize the final outcome of a series of chosen actions. More sophisticated search models typically would require simulation in order to assess the possible value of permissible actions, in fact, a key contributor to the success of AlphaGo is to use a deep neural network to approximate the value of a board position.
+
+There are general issues pertaining to these classes of AI models which requires us to provide an explanation for their output.
+
+<p align="center">
+  <img src="/img/figure1_panda_gibbon.png">
+  <p><strong>Figure 1:</strong> Panda obfusicated with noise produces Gibbon.</p>
+</p>
+
+
 # XAI State-of-the-Art (SotA)
+
+[Selective Attention](/img/figure2_selective_attention.gif)
 
 # What is an Explanation? - Perspectives from Philosophy
 
