@@ -36,14 +36,14 @@ Present AI models fall broadly into 4 categories: Classification, Generation, Si
 There are general issues pertaining to these classes of AI models which requires us to provide an explanation for their output.
 
 <p align="center">
-  <img src="/img/figure1_panda_gibbon.png">
+  <img src="/XAI/img/figure1_panda_gibbon.png">
   <p><strong>Figure 1:</strong> Panda obfusicated with noise produces Gibbon.</p>
 </p>
 
 
 # XAI State-of-the-Art (SotA)
 
-[Selective Attention](/img/figure2_selective_attention.gif)
+![Selective Attention](/img/figure2_selective_attention.gif)
 
 # What is an Explanation? - Perspectives from Philosophy
 
