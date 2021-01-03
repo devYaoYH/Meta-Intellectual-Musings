@@ -62,7 +62,6 @@ Such problems pose a pressing concern for the application of Deep CNN image clas
 <p align="center">
   <img src="/XAI/img/tay_ai_twitter_bot.png">
 </p>
-<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" style="position: static; visibility: visible; width: 250px; height: 347px; display: block; flex-grow: 1;" title="Twitter Tweet" src="https://platform.twitter.com/embed/index.html?dnt=false&amp;embedId=twitter-widget-0&amp;frame=false&amp;hideCard=false&amp;hideThread=false&amp;id=712880710328139776&amp;lang=en&amp;theme=light&amp;widgetsVersion=ed20a2b%3A1601588405575&amp;width=550px" data-tweet-id="712880710328139776"></iframe>
 <p align="center"><strong>Figure 3:</strong> Tweet responding to Tay AI's increasingly inappropriate tweets <a href="https://www.theverge.com/2016/3/24/11297050/tay-microsoft-chatbot-racist">Source</a></p>
 
 ## The case of the spasmodic goalie
