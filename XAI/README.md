@@ -37,10 +37,23 @@ There are general issues pertaining to these classes of AI models which requires
 
 ## The case of the misidentified panda
 
+The class of tasks surrounding image classification has received much attention over the years as the basis for numerous applications: Object identification and tracking, Image segmentation, and Face recognition to name a few. Face recognition as part of biometrics registration at international customs is already widely deployed in many countries. Driverless cars also requires a robust assessment of its surroundings using some visual system. The correct functioning of image classification models is thus paramount to the success of this wide range of solutions. However, recent literature has identified that it is not difficult to fool AI image classifiers into providing an incorrect output using images that are slightly changed. Furthermore, modifications in such adversarial images are imperceptible to the human eye, rendering their detection harder.
+
 <p align="center">
-  <img src="/XAI/img/figure1_panda_gibbon.png">
+  <img src="/XAI/img/panda_gibbon.png">
 </p>
 <p align="center"><strong>Figure 1:</strong> Panda obfusicated with noise produces Gibbon. <a href="https://openai.com/blog/adversarial-example-research/">Source</a></p>
+
+In the above example, a distributed pattern of noise is overlayed onto the original image and tricks the model into classifying the modified image as a high-probability gibbon. Furthermore, it is possible to print out such adversarial images or construct an adversarial 3D model and robustly trick models from different angles ([case of a turtle model misidentified as a gun](https://www.theverge.com/2017/11/2/16597276/google-ai-image-attacks-adversarial-turtle-rifle-3d-printed)).
+
+There is also growing concern that Deep CNNs used in most image classifiers are not sufficiently robust for current applications. A study by Michael et. al highlighted that Deep CNNs are unable to generalize pose of image objects when they differ from canonical poses that the CNN has been trained on.
+
+<p align="center">
+  <img src="/XAI/img/pose_adversarial_attacks.png">
+</p>
+<p align="center"><strong>Figure 2:</strong> Different poses of a recognizable object in its canonical pose elicits incorrect classification. <a href="https://arxiv.org/pdf/1811.11553.pdf">Source</a></p>
+
+Such problems pose a pressing concern for the application of Deep CNN image classification models out in the wild. For instance, driverless cars could be fooled by roadsigns modified via an adversarial attack with disastrous consequences. 
 
 ## The case of the inappropriate chatbot
 
@@ -58,7 +71,7 @@ There are general issues pertaining to these classes of AI models which requires
 ## Attending to specific regions of input
 
 <p align="center">
-  <img src="/XAI/img/figure2_selective_attention.gif">
+  <img src="/XAI/img/selective_attention.gif">
 </p>
 <p align="center"><strong>Figure 2:</strong> Overlay of selected input regions model attends to <a href="https://ai.googleblog.com/2020/06/using-selective-attention-in.html">Source</a></p>
 
