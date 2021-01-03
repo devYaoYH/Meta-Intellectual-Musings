@@ -33,7 +33,7 @@ Given the broad overview of what, why and how XAI is conducted, we will next exa
 
 Present AI models fall broadly into 4 categories: Classification, Generation, Prediction, and Search. Classification models are predominantly implemented with Convolutional Neural Networks (CNNs), and generative models are the flip side of classification. Rather than extracting a set of hidden features from the input to seperate the set of given inputs to some set of output labels (think of image classification), generative models such as Generative Adversarial Networks (GAN) fills in the gaps and produces output similar to inputs from some hidden set of features (think of GPT-2/3 and Deepfake). Predictive models approximates some resultant state given rules and initial parameters. Examples include DeepMind's protein folding model as well as a neural network simulation of solutions to three-body problems in physics (cite paper Brutus-trained ANN). Search models see widespread use in Game-Playing agents such as AlphaGo and the venerable DeepBlue chess AI. These typically explore and assess actions with an value function in mind to optimize the final outcome of a series of chosen actions. More sophisticated search models typically would require a predictive assessment of the possible values of permissible actions, in fact, a key contributor to the success of AlphaGo is the use of a deep neural network to approximate the value of board positions.
 
-There are general issues pertaining to these classes of AI models which requires us to provide an explanation for their output. For a classification or generation model using deep neural networks, nowhere can we find explicit rules that govern the decision processes leading to their outputs. Similarly, when prediction results deviate from empirical findings, an explanation is warranted as to why there is this difference which could help in corrective measures to further improve results. Searching assumes that one has a good fit for the value function utilized in assessing actions and states which is not guaranteed. In addition, there is the ugly issue of the Value Alignment Problem: how can we ensure that AI holds our values in its best interest? Below, we shall outline a few examples of such issues in recent literature.
+There are general issues pertaining to these classes of AI models which requires us to provide an explanation for their output. For a classification or generation model using deep neural networks, nowhere can we find explicit rules that govern the decision processes leading to their outputs. Similarly, when prediction results deviate from empirical findings, an explanation is warranted as to why there is this difference which could help in corrective measures to further improve results. Searching assumes that one has a good fit for the value function utilized in assessing actions and states which is not guaranteed. In addition, there is the ugly issue of the Value Alignment Problem: how can we ensure that AI holds our values in its best interest? Below, we shall outline a few examples of errors in AI models that require an explanation.
 
 ## The case of the misidentified panda
 
@@ -53,11 +53,16 @@ There is also growing concern that Deep CNNs used in most image classifiers are 
 </p>
 <p align="center"><strong>Figure 2:</strong> Different poses of a recognizable object in its canonical pose elicits incorrect classification. <a href="https://arxiv.org/pdf/1811.11553.pdf">Source</a></p>
 
-Such problems pose a pressing concern for the application of Deep CNN image classification models out in the wild. For instance, driverless cars could be fooled by roadsigns modified via an adversarial attack with disastrous consequences. 
+Such problems pose a pressing concern for the application of Deep CNN image classification models out in the wild. For instance, driverless cars could be fooled by roadsigns modified via an adversarial attack with disastrous consequences, or be unable to identify obstacles or pedestrains in novel poses (an example pointed out in the paper was a fatal accident involving a Tesla due to the car's autopilot failing to identify a white truck).
 
 ## The case of the inappropriate chatbot
 
 [Microsoft's AI chatbot producing racist tweets](https://www.theverge.com/2016/3/24/11297050/tay-microsoft-chatbot-racist)
+
+<p align="center">
+  <img src="/XAI/img/tay_ai_twitter_bot.png">
+</p>
+<p align="center"><strong>Figure 3:</strong> Tweet responding to Tay AI's increasingly inappropriate tweets <a href="https://www.theverge.com/2016/3/24/11297050/tay-microsoft-chatbot-racist">Source</a></p>
 
 ## The case of the spasmodic goalie
 
