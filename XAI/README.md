@@ -86,11 +86,18 @@ Similar to Classifier Deep CNNs, Reinforcement Learning Search agents have been 
 
 Beyond showing that a different class of AI models are susceptible to the same adversarial attacks as Deep CNNs, this example also highlights that AI models may produce wildly unexpected ways of 'solving' the problems posed to it. Here, the adversarial agent is also a machine learning model. Given the task of 'optimally' defeating the normal agent, it employs novel strategies which violate our expectations. Here, the concern is two-fold: Firstly, is the problem a lack of sufficient constraints in the environment (thus enabling such adversarial strategies)? Secondly, how can we prevent undesirable novel strategies?
 
-The AI philosopher Nick Bostrom states that one of the key problematic outcome of achieving the singularity is that such a superintelligent system will always find ways to outsmart its human creators. For our red adversarial goalie, it appears unlikely that we will be able to fully specify constraints to its actions such that novel unexpected strategies do not occur. This failure reduces the likelihood that we would be able to further prevent undesirable strategies produced by AI models all in the name of 'optmially' fulfiling its goal. The pessimistic worry here by Nick Bostrom is that "we might make a mistake and give [superintelligence] goals that lead it to annihilate humankind". A more likely present-day consequence is that we may find our AI models deviate from the values we hold to high importance when seeking actions that optimize some poorly-set value function.
+The philosopher Nick Bostrom states that one of the key problematic outcome of achieving the singularity is that such a superintelligent system will always find ways to outsmart its human creators. For our red adversarial goalie, it appears unlikely that we will be able to fully specify constraints to its actions such that novel unexpected strategies do not occur. This failure reduces the likelihood that we would be able to further prevent undesirable strategies produced by AI models all in the name of 'optmially' fulfiling its goal. The pessimistic worry here by Nick Bostrom is that "we might make a mistake and give [superintelligence] goals that lead it to annihilate humankind". A more likely present-day consequence is that we may find our AI models deviate from the values we hold to high importance when seeking actions that optimize some poorly-constrained value function.
 
 # Function of explanations
 
-Against this background of increasingly pressing problems with today's AI models, the XAI movements hopes to provide solutions to these problems by generating explanations for model outputs as well as increasing the transparency of such models.
+Against this background of increasingly pressing problems with today's AI models, the XAI movements hopes to provide solutions to these problems by generating explanations for model outputs as well as increasing the transparency of such models. In a recent review of research in XAI, Giulia and Luca surmises that there are four main purposes XAI sees in explanations [cite Giulia et.al 2020: Systematic Review]:
+
+- Explain to *justify*: explanations increase justifiability of decisions based on model output
+- Explain to *control*: explanations should enhance transparency, allowing its debugging and identification of potential flaws
+- Explain to *improve*: explanations help with improving the accuracy and efficiency of models
+- Explain to *discover*: explanations support extraction of novel knowledge and learning of relationships and patterns
+
+
 
 # XAI State-of-the-Art (SotA)
 
@@ -130,3 +137,4 @@ XAI does not only serve the purpose of examining presently available systems in 
 5. [RL goalie adversarial attack] https://bair.berkeley.edu/blog/2020/03/27/attacks/
 6. [Selective Attention Agent] https://ai.googleblog.com/2020/06/using-selective-attention-in.html
 7. [Command Responsibility Doctrine] https://www.oxfordbibliographies.com/view/document/obo-9780199796953/obo-9780199796953-0088.xml
+8. [Explanable Artificial Intelligence: a Systematic Review] https://arxiv.org/pdf/2006.00093.pdf
