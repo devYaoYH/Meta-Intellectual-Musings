@@ -57,17 +57,31 @@ Such problems pose a pressing concern for the application of Deep CNN image clas
 
 ## The case of the inappropriate chatbot
 
-[Microsoft's AI chatbot producing racist tweets](https://www.theverge.com/2016/3/24/11297050/tay-microsoft-chatbot-racist)
+Another high profile case occured a few years ago when chatbots were gaining traction and finding increased usage in customer service domains. Framed as an experiment in "conversational understanding", Microsoft released a Twitter bot called Tay which posted tweets and replied to user's tweets in the public domain. Although initially innocuous, it quickly learned to parrot inappropriate tweets from users resulting in Microsoft shutting the experiment down within 24hours.
 
 <p align="center">
   <img src="/XAI/img/tay_ai_twitter_bot.png">
 </p>
 <p align="center"><strong>Figure 3:</strong> Tweet responding to Tay AI's increasingly inappropriate tweets <a href="https://www.theverge.com/2016/3/24/11297050/tay-microsoft-chatbot-racist">Source</a></p>
 
+In the previous case of the misidentified panda, no modifications were made to the AI model's internal structure, such panda-gibbon attacks merely amplifies already present edge-cases within the model. However, with this case of the inappropriate chatbot, it is the learning mechanism that has been hijacked and exploited to produce undesired results from the AI model. Such an 'attack', although possibly unintentional, highlights the importance of training data in model construction. Machine learning AI models are shackled by the curse of scale. More data and more processing power has drastically improved their ability but they are nonetheless still limited by the quality of data that goes into training them. Here, we observe that by poisoning the data from which an AI model learns, it is possible to control the output from such models and for a malicious party, bias such models towards undesirable outcomes.
+
 ## The case of the spasmodic goalie
 
-[Adversarial attacks on RL agents](https://bair.berkeley.edu/blog/2020/03/27/attacks/)
+Similar to Classifier Deep CNNs, Reinforcement Learning Search agents have been recently shown to be vulnerable to the same class of attacks by modifying their inputs. Two simulated robots face-off each other in a soccer game of penalty kick. The blue player is able to score quite freqeuntly when playing against normal simulated opponents, but fails consistently against the red adversarial player which employs a novel strategy of contorting itself on the floor rather than anticipating and attempting to block the oncoming shot.
 
+<p align="center">
+  <img src="/XAI/img/spasmodic_goalie.png">
+</p>
+<p align="center"><strong>Figure 4:</strong> An adversarial opponent goalie contorts on the floor to prevent scoring. <a href="https://bair.berkeley.edu/blog/2020/03/27/attacks/">Source</a></p>
+
+Beyond showing that a different class of AI models are susceptible to the same adversarial attacks as Deep CNNs, this example also highlights that AI models may produce wildly unexpected ways of 'solving' the problems posed to it. Here, the adversarial agent is also a machine learning model. Given the task of 'optimally' defeating the normal agent, it employs novel strategies which violate our expectations. Here, the concern is two-fold: Firstly, is the problem a lack of sufficient constraints in the environment (thus enabling such adversarial strategies)? Secondly, how can we prevent undesirable novel strategies?
+
+The AI philosopher Nick Bostrom states that one of the key problematic outcome of achieving the singularity is that such a superintelligent system will always find ways to outsmart its human creators. For our red adversarial goalie, it appears unlikely that we will be able to fully specify constraints to its actions such that novel unexpected strategies do not occur. This failure reduces the likelihood that we would be able to further prevent undesirable strategies produced by AI models all in the name of 'optmially' fulfiling its goal. A pessimistic worry here by Nick Bostrom is that "we might make a mistake and give [AI models] goals that lead it to annihilate humankind".
+
+# Function of explanations
+
+Against this background of increasingly pressing problems with today's AI models, the XAI movements hopes to provide solutions to these problems by generating explanations for model outputs as well as increasing the transparency of such models.
 
 # XAI State-of-the-Art (SotA)
 
