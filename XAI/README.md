@@ -1,12 +1,21 @@
-> Alice and Bob are driving along a road in the city. The sky was dark and visibility was poor. Flashes of lightning occasionally lit up the foreboding cityscape, painting sawtooth patterns along the road ahead. The staccato of raindrops on the windshield gradually turned into a lullaby. Suddenly, a few meters ahead, an irregular shadow stepped into view, jolting Alice into full alertness. On reflex, Alice spins the wheel around and narrowly avoids the shadow. The wheels skidded along the wet road and for a moment the car spins out of control, crashing headfirst into the sidewalk. Right behind Alice in another car, Bob continued on without pause and the irregular shadow dissipated into a mist of water as the car drove over a puddle. So sets the scene for our hypothetical parable.
+# Thoughts on Explanable AI (XAI)
 
-# Introduction
+This document is the collection of thoughts on the present matter of proposing that XAI can solve many of the problems we encounter during the usage of AI models. I first outline the current trajectory of XAI, the problems in the field where explanations are proposed to help with, and the present products of XAI. Next, I introduce disambiguations on the purpose and form of explanations from a perspective of Philosophy, in particular a Philosophy of explanations in Science and justifications in Ethics. Finally, I argue that the form of explanations we seek to help with the problems in using AI models ultimately do not consist of that which lies within our Models. We have to seek explanations from outside the black-box rather than peering within. Although making transparent the inner workings will be helpful, it cannot be treated as a silver-bullet in helping us resolve issues surrounding the use of AI models in society.
 
-*“Science gathers knowledge faster than Society gathers wisdom” – Isaac Asimov.*
+This is the verbose version of the document, for a more concise take along a similar direction, see [Article](/XAI/article.md).
 
-Aphorisms catch on precisely because it abstracts a wealth of acute observations behind few words, exemplifying the voluminous content possible with comparatively limited tokens. Penned in the 1980s, with the menace of the Cold War hanging heavy in the air, technological advances threatened to mark an end to life as we knew it. The spectre of improperly wielded scientific advances throughout history has plagued humanity’s quest to better its conditions. Yesterday (arguably still), unrestrained forces of the atomic nucleus sought freedom through annihilation. Today, widespread employment of Artificial Intelligence models provide convenience through oppression.
+## Table of contents:
 
-To be clear, we have yet to succumb to the folly of entrusting AIs with too much today and have been actively fighting back as a community from researchers to policy makers against the non-judicious application of AI technology. It is worth highlighting a key step in this fight: NeurIPS, a prominent conference at the forefront of AI development, has introduced a necessary “Impact Statement” for all paper submissions stating the “broader impact of their work, including its ethical aspects and future societal consequences” [cite NeurIPS]. This article is a look behind the scenes of this fight to ensure the ethical application of AI technologies from the perspective of the Explainable AI (XAI) movement, and attempts to show how the battlelines are always hazier than we think.
+- [What, What and How is XAI?](/XAI#what-why-and-how-is-xai)
+- [What requires explanining? - When Models Fail](/XAI#what-requires-explanaing---when-models-fail)
+  - [The case of the misidentified pand](/XAI#the-case-of-the-misidentified-panda)
+  - [The case of the inappropriate chatbot](/XAI#the-case-of-the-inappropriate-chatbot)
+  - [The case of the spasmodic goalie](/XAI#the-case-of-the-spasmodic-goalie)
+- [Function of explanations](/XAI#function-of-explanations)
+- [XAI State-of-the-Art](/XAI#xai-state-of-the-art-sota)
+- [What is an Explanation? - Perspectives from Philosophy](/XAI#what-is-an-explanation---perspectives-from-philosophy)
+- [Where Philosophy can help XAI](/XAI#where-philosophy-can-help-xai)
+- [References](/XAI#references)
 
 # What, Why and How is XAI?
 
@@ -29,7 +38,7 @@ Furthermore, it highlights some general approaches to achieving these goals:
 
 Given the broad overview of what, why and how XAI is conducted, we will next examine instances where AI models require explanations as well as what are the current products from the XAI movement.
 
-# What require explaining? - When Models Fail
+# What requires explaining? - When Models Fail
 
 Present AI models fall broadly into 4 categories: Classification, Generation, Prediction, and Search. Classification models are predominantly implemented with Convolutional Neural Networks (CNNs), and generative models are the flip side of classification. Rather than extracting a set of hidden features from the input to seperate the set of given inputs to some set of output labels (think of image classification), generative models such as Generative Adversarial Networks (GAN) fills in the gaps and produces output similar to inputs from some hidden set of features (think of GPT-2/3 and Deepfake). Predictive models approximates some resultant state given rules and initial parameters. Examples include DeepMind's protein folding model as well as a neural network simulation of solutions to three-body problems in physics (cite paper Brutus-trained ANN). Search models see widespread use in Game-Playing agents such as AlphaGo and the venerable DeepBlue chess AI. These typically explore and assess actions with an value function in mind to optimize the final outcome of a series of chosen actions. More sophisticated search models typically would require a predictive assessment of the possible values of permissible actions, in fact, a key contributor to the success of AlphaGo is the use of a deep neural network to approximate the value of board positions.
 
@@ -77,7 +86,7 @@ Similar to Classifier Deep CNNs, Reinforcement Learning Search agents have been 
 
 Beyond showing that a different class of AI models are susceptible to the same adversarial attacks as Deep CNNs, this example also highlights that AI models may produce wildly unexpected ways of 'solving' the problems posed to it. Here, the adversarial agent is also a machine learning model. Given the task of 'optimally' defeating the normal agent, it employs novel strategies which violate our expectations. Here, the concern is two-fold: Firstly, is the problem a lack of sufficient constraints in the environment (thus enabling such adversarial strategies)? Secondly, how can we prevent undesirable novel strategies?
 
-The AI philosopher Nick Bostrom states that one of the key problematic outcome of achieving the singularity is that such a superintelligent system will always find ways to outsmart its human creators. For our red adversarial goalie, it appears unlikely that we will be able to fully specify constraints to its actions such that novel unexpected strategies do not occur. This failure reduces the likelihood that we would be able to further prevent undesirable strategies produced by AI models all in the name of 'optmially' fulfiling its goal. A pessimistic worry here by Nick Bostrom is that "we might make a mistake and give [AI models] goals that lead it to annihilate humankind".
+The AI philosopher Nick Bostrom states that one of the key problematic outcome of achieving the singularity is that such a superintelligent system will always find ways to outsmart its human creators. For our red adversarial goalie, it appears unlikely that we will be able to fully specify constraints to its actions such that novel unexpected strategies do not occur. This failure reduces the likelihood that we would be able to further prevent undesirable strategies produced by AI models all in the name of 'optmially' fulfiling its goal. The pessimistic worry here by Nick Bostrom is that "we might make a mistake and give [superintelligence] goals that lead it to annihilate humankind". A more likely present-day consequence is that we may find our AI models deviate from the values we hold to high importance when seeking actions that optimize some poorly-set value function.
 
 # Function of explanations
 
