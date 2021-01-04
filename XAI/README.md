@@ -7,7 +7,7 @@ This is the verbose version of the document, for a more concise take along a sim
 ## Table of contents:
 
 - [What, What and How is XAI?](/XAI#what-why-and-how-is-xai)
-- [What requires explanining? - When Models Fail](/XAI#what-requires-explanaing---when-models-fail)
+- [What requires explanining? - When Models Fail](/XAI#what-requires-explaining---when-models-fail)
   - [The case of the misidentified pand](/XAI#the-case-of-the-misidentified-panda)
   - [The case of the inappropriate chatbot](/XAI#the-case-of-the-inappropriate-chatbot)
   - [The case of the spasmodic goalie](/XAI#the-case-of-the-spasmodic-goalie)
@@ -97,20 +97,34 @@ Against this background of increasingly pressing problems with today's AI models
 - Explain to *improve*: explanations help with improving the accuracy and efficiency of models
 - Explain to *discover*: explanations support extraction of novel knowledge and learning of relationships and patterns
 
+For the earlier examples of adversarial attacks, it is clear that the role of explanations in those cases would be to improve our ability to detect such possible flaws in our models as well as make improvements to defend against these adversarial attacks. Furthermore, in such cases as the unfortunate Tesla incident, the ability to offer explanations as to why its autopilot made the decisions it did could add weight in a legal setting. Lastly, explanations could elucidate AlphaGo's famous 37th move against Lee Sedol that expert commentators saw as a "very strange move" and one not within human playbooks [cite WIRED article].
 
+Crucially, we observe that the review identified such roles of such explanations which are mostly post-hoc and focused around the actions and workings of the model. This is a first indication of the limits of what we can come to expect from the XAI movement, it is very much an engineering field that currently looks inwards to produce tools which help to better such models. Contrasted against the problems it attempts to position itself to solve, such an engineering focus appears lacking. This is not to dismiss the importance of such tools currently produced by XAI, rather, it is a call to reign back some of our expectations for this emerging field.
 
 # XAI State-of-the-Art (SotA)
 
+It will become clear that present products fall short of the goal of "[enabling] human users to understand, appropriately trust, and effectively manage the emerging generation of artificially intelligent partners". I propose that one key issue is that such XAI products as we will next review concern themselves with a mechanistic explanation of a model's inner workings. However, the originally stated goal is one which is broader and revolves around our human *understanding* and *trusting* such models. Simply presenting illuminating what's inside the black-box and expecting the reflection to satisfy human understanding is wholly insufficient.
+
 ## Tracing important parameters through model
 
-## Attending to specific regions of input
+<p align="center">
+  <img src="/XAI/img/saliency_maps.png">
+</p>
+<p align="center"><strong>Figure 5:</strong> Saliency maps of image classification results from VGG-16 Deep CNN model <a href="https://arxiv.org/pdf/1904.00605.pdf">Source</a></p>
+
+## Employing self-attention masking
 
 <p align="center">
   <img src="/XAI/img/selective_attention.gif">
 </p>
-<p align="center"><strong>Figure 2:</strong> Overlay of selected input regions model attends to <a href="https://ai.googleblog.com/2020/06/using-selective-attention-in.html">Source</a></p>
+<p align="center"><strong>Figure 6:</strong> Overlay of selected input regions model attends to <a href="https://ai.googleblog.com/2020/06/using-selective-attention-in.html">Source</a></p>
 
 ## Learning to provide explanatory [text]
+
+<p align="center">
+  <img src="/XAI/img/productive_visual_explanations.png">
+</p>
+<p align="center"><strong>Figure 7:</strong> Training a model to generate explanatory text alongside classification output <a href="https://arxiv.org/pdf/1603.08507v1.pdf">Source</a></p>
 
 # What is an Explanation? - Perspectives from Philosophy
 
@@ -138,3 +152,5 @@ XAI does not only serve the purpose of examining presently available systems in 
 6. [Selective Attention Agent] https://ai.googleblog.com/2020/06/using-selective-attention-in.html
 7. [Command Responsibility Doctrine] https://www.oxfordbibliographies.com/view/document/obo-9780199796953/obo-9780199796953-0088.xml
 8. [Explanable Artificial Intelligence: a Systematic Review] https://arxiv.org/pdf/2006.00093.pdf
+9. [Move 37 by AlphaGo] https://www.wired.com/2016/03/two-moves-alphago-lee-sedol-redefined-future/
+10. [SotA Saliency Map] https://arxiv.org/pdf/1904.00605.pdf
