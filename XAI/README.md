@@ -1,6 +1,6 @@
 # Thoughts on Explanable AI (XAI)
 
-This document is the collection of thoughts on the present matter of proposing that XAI can solve many of the problems we encounter during the usage of AI models. I first outline the current trajectory of XAI, the problems in the field where explanations are proposed to help with, and the present products of XAI. Next, I introduce disambiguations on the purpose and form of explanations from a perspective of Philosophy, in particular a Philosophy of explanations in Science and justifications in Ethics. Finally, I argue that the form of explanations we seek to help with the problems in using AI models ultimately do not consist of that which lies within our Models. We have to seek explanations from outside the black-box rather than peering within. Although making transparent the inner workings will be helpful, it cannot be treated as a silver-bullet in helping us resolve issues surrounding the use of AI models in society.
+This document is the collection of thoughts on proposal that XAI can solve many of the problems we encounter during the usage of AI models. I first outline the current trajectory of XAI, the problems in the field where explanations are proposed to help with, and the present products of XAI. Next, I introduce disambiguations on the purpose and form of explanations from a perspective of Philosophy, in particular a Philosophy of explanations in Science and justifications in Ethics. Finally, I argue that the form of explanations we seek to help with the problems in using AI models ultimately do not consist of that which lies within our Models. We have to seek explanations from outside the black-box rather than peering within. Although making transparent the inner workings will be helpful, it cannot be treated as a silver-bullet in helping us resolve issues surrounding the use of AI models in society.
 
 This is the verbose version of the document, for a more concise take along a similar direction, see [Article](/XAI/article.md).
 
@@ -77,7 +77,7 @@ In the previous case of the misidentified panda, no modifications were made to t
 
 ## The case of the spasmodic goalie
 
-Similar to Classifier Deep CNNs, Reinforcement Learning Search agents have been recently shown to be vulnerable to the same class of attacks by modifying their inputs. Two simulated robots face-off each other in a soccer game of penalty kick. The blue player is able to score quite freqeuntly when playing against normal simulated opponents, but fails consistently against the red adversarial player which employs a novel strategy of contorting itself on the floor rather than anticipating and attempting to block the oncoming shot.
+Similar to Classifier Deep CNNs, Reinforcement Learning Search agents have been recently shown to be vulnerable to the same class of attacks by modifying their inputs. Two simulated robots face-off each other in a soccer game of penalty kick. The blue player is able to score freqeuntly when playing against normal simulated opponents, but fails consistently against the red adversarial player which employs a novel strategy of contorting itself on the floor rather than anticipating and attempting to block the oncoming shot.
 
 <p align="center">
   <img src="/XAI/img/spasmodic_goalie.png">
@@ -99,7 +99,7 @@ Against this background of increasingly pressing problems with today's AI models
 
 For the earlier examples of adversarial attacks, it is clear that the role of explanations in those cases would be to improve our ability to detect such possible flaws in our models as well as make improvements to defend against these adversarial attacks. Furthermore, in such cases as the unfortunate Tesla incident, the ability to offer explanations as to why its autopilot made the decisions it did could add weight in a legal setting. Lastly, explanations could elucidate AlphaGo's famous 37th move against Lee Sedol that expert commentators saw as a "very strange move" and one not within human playbooks [cite WIRED article].
 
-Crucially, we observe that the review identified such roles of such explanations which are mostly post-hoc and focused around the actions and workings of the model. This is a first indication of the limits of what we can come to expect from the XAI movement, it is very much an engineering field that currently looks inwards to produce tools which help to better such models. Contrasted against the problems it attempts to position itself to solve, such an engineering focus appears lacking. This is not to dismiss the importance of such tools currently produced by XAI, rather, it is a call to reign back some of our expectations for this emerging field.
+Crucially, we observe that the review identified roles of explanations which are mostly post-hoc and focused around the actions and workings of the model. This is a first indication of the limits of what we can come to expect from the XAI movement, it is very much an engineering field that currently looks inwards to produce tools which help to better such models. Contrasted against the problems it attempts to position itself to solve, such an engineering focus appears lacking. This is not to dismiss the importance of such tools currently produced by XAI, rather, it is a call to reign back some of our expectations for this emerging field.
 
 # XAI State-of-the-Art (SotA)
 
@@ -116,21 +116,33 @@ One type of approach to illuminating the AI black box is to identify what are th
 
 Such an approach is representative of the first broad thrust of the XAI movement: developing tools that allows us to interact intelligibly with our AI models. This approach attempts to answer a very human question: What factored into your decision? Furthermore, as engineers, it also allows us to identify processes happening within our models and fulfil the role of *control* or *improve*-type explanations.
 
-## Employing self-attention masking
-
-<p align="center">
-  <img src="/XAI/img/selective_attention.gif">
-</p>
-<p align="center"><strong>Figure 6:</strong> Overlay of selected input regions model attends to <a href="https://ai.googleblog.com/2020/06/using-selective-attention-in.html">Source</a></p>
-
-An alternative to asking post-hoc questions is to modify our models themselves to function in a way that is 'self-explanatory'. This approach is typically references as interpretable AI rather than explanatory AI.
-
 ## Learning to provide explanatory [text]
 
 <p align="center">
   <img src="/XAI/img/productive_visual_explanations.png">
 </p>
-<p align="center"><strong>Figure 7:</strong> Training a model to generate explanatory text alongside classification output <a href="https://arxiv.org/pdf/1603.08507v1.pdf">Source</a></p>
+<p align="center"><strong>Figure 6:</strong> Training a model to generate explanatory text alongside classification output <a href="https://arxiv.org/pdf/1603.08507v1.pdf">Source</a></p>
+
+## Employing self-attention masking
+
+<p align="center">
+  <img src="/XAI/img/selective_attention.gif">
+</p>
+<p align="center"><strong>Figure 7:</strong> Overlay of selected input regions model attends to <a href="https://ai.googleblog.com/2020/06/using-selective-attention-in.html">Source</a></p>
+
+An alternative to asking post-hoc questions is to modify our models themselves to function in a way that is 'self-explanatory'. This approach is typically referenced as interpretable AI rather than explanable AI. There is pressure for XAI to move away from problematic post-hoc explanations. In her widely cited 2019 paper, Cynthia Rudin writes that "trying to *explain* black box models, rather than creating models that are *interpretable* in the first place, is likely to perpetuate bad practices and can potentially cause catastrophic harm to society". She points out 2 main reasons similar to what we have criticized the above two approaches for [cite Rudin 2019 paper]:
+
+1. Explainable ML methods provide explanations that are not faithful to what the original model computes
+2. Explanations often do not make sense, or do not provide enough detail to understand what the black box is doing
+
+<p align="center">
+  <img src="/XAI/img/gam_interpretable_architecture.png">
+</p>
+<p align="center"><strong>Figure 8:</strong> This paper introduces the Neural Additive Model, a more interpretable network architecture for classification<a href="https://arxiv.org/pdf/2004.13912.pdf">Source</a></p>
+
+## Case study: Google XAI Whitepaper
+
+Now that we have reviewed some of the different types of approaches in research literature, we can apply the same critical lens to today's commercial offerings. Google offers a Cloud Explainable AI service (beta) alongside its AutoML and AI Platform products. We will use the accompanying [whitepaper](https://storage.googleapis.com/cloud-ai-whitepapers/AI%20Explainability%20Whitepaper.pdf) as a reference to its product offerings. 
 
 # What is an Explanation? - Perspectives from Philosophy
 
@@ -160,3 +172,5 @@ XAI does not only serve the purpose of examining presently available systems in 
 8. [Explanable Artificial Intelligence: a Systematic Review] https://arxiv.org/pdf/2006.00093.pdf
 9. [Move 37 by AlphaGo] https://www.wired.com/2016/03/two-moves-alphago-lee-sedol-redefined-future/
 10. [SotA Saliency Map] https://arxiv.org/pdf/1904.00605.pdf
+11. [NAM interpretable architecture] https://arxiv.org/pdf/2004.13912.pdf
+12. [Google Cloud XAI Whitepaper] https://storage.googleapis.com/cloud-ai-whitepapers/AI%20Explainability%20Whitepaper.pdf
