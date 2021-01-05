@@ -13,8 +13,17 @@ This is the verbose version of the document, for a more concise take along a sim
   - [The case of the spasmodic goalie](/XAI#the-case-of-the-spasmodic-goalie)
 - [Function of explanations](/XAI#function-of-explanations)
 - [XAI State-of-the-Art](/XAI#xai-state-of-the-art-sota)
+  - [Tracing important parameters through model](/XAI#tracing-important-parameters-through-model)
+  - [Learning to provide explanatory [text]](/XAI#learning-to-provide-explanatory-text)
+  - [Employing self-attention masking](/XAI#employing-self-attention-masking)
+  - [Case study: Google XAI Whitepaper](/XAI#case-study-google-xai-whitepaper)
 - [What is an Explanation? - Perspectives from Philosophy](/XAI#what-is-an-explanation---perspectives-from-philosophy)
 - [Where Philosophy can help XAI](/XAI#where-philosophy-can-help-xai)
+- [Distinguishing between Diagnostics and Explanation](/XAI#distinguishing-between-diagnostics-and-explanation)
+- [Explanations exist outside AI Models](/XAI#explanations-exist-outside-ai-models)
+- [Current tools of Command Responsibility](/XAI#current-tools-of-command-responsibility)
+- [XAI not merely as a way of looking back, but looking forwards](/XAI#xai-not-merely-as-a-way-of-looking-back-but-looking-forwards)
+- [The Future of XAI](/XAI#the-future-of-xai)
 - [References](/XAI#references)
 
 # What, Why and How is XAI?
