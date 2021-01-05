@@ -84,9 +84,9 @@ Similar to Classifier Deep CNNs, Reinforcement Learning Search agents have been 
 </p>
 <p align="center"><strong>Figure 4:</strong> An adversarial opponent goalie contorts on the floor to prevent scoring. <a href="https://bair.berkeley.edu/blog/2020/03/27/attacks/">Source</a></p>
 
-Beyond showing that a different class of AI models are susceptible to the same adversarial attacks as Deep CNNs, this example also highlights that AI models may produce wildly unexpected ways of 'solving' the problems posed to it. Here, the adversarial agent is also a machine learning model. Given the task of 'optimally' defeating the normal agent, it employs novel strategies which violate our expectations. Here, the concern is two-fold: Firstly, is the problem a lack of sufficient constraints in the environment (thus enabling such adversarial strategies)? Secondly, how can we prevent undesirable novel strategies?
+Beyond showing that a different class of AI models are susceptible to the same adversarial attacks as Deep CNNs, this example also highlights that AI models may produce wildly unexpected ways of 'solving' the problems posed to it. In this example, the adversarial agent is also a machine learning model. Given the task of 'optimally' defeating the normal agent, it employs novel strategies which violate our expectations. Here, the concern is two-fold: Firstly, is the problem a lack of sufficient constraints in the environment (thus enabling such adversarial strategies)? Secondly, how can we prevent undesirable novel strategies?
 
-The philosopher Nick Bostrom states that one of the key problematic outcome of achieving the singularity is that such a superintelligent system will always find ways to outsmart its human creators. For our red adversarial goalie, it appears unlikely that we will be able to fully specify constraints to its actions such that novel unexpected strategies do not occur. This failure reduces the likelihood that we would be able to further prevent undesirable strategies produced by AI models all in the name of 'optmially' fulfiling its goal. The pessimistic worry here by Nick Bostrom is that "we might make a mistake and give [superintelligence] goals that lead it to annihilate humankind". A more likely present-day consequence is that we may find our AI models deviate from the values we hold to high importance when seeking actions that optimize some poorly-constrained value function.
+The philosopher Nick Bostrom states that one of the key problematic outcome of achieving the singularity is that such a superintelligent system will always find ways to outsmart its human creators. For our red adversarial goalie, it appears unlikely that we will be able to fully specify constraints to its actions such that novel unexpected strategies do not occur. This failure reduces the likelihood that we would be able to further prevent undesirable strategies produced by AI models all in the name of 'optmially' fulfiling its goal. The pessimistic worry here by Nick Bostrom is that "we might make a mistake and give [superintelligence] goals that lead it to annihilate humankind". A more likely present-day consequence is that we may find our AI models deviate from the values we hold to high importance when seeking actions that optimize some poorly-constrained value function. This is essentially the value alignment problem hinted at earlier.
 
 # Function of explanations
 
@@ -103,7 +103,7 @@ Crucially, we observe that the review identified such roles of such explanations
 
 # XAI State-of-the-Art (SotA)
 
-It will become clear that present products fall short of the goal of "[enabling] human users to understand, appropriately trust, and effectively manage the emerging generation of artificially intelligent partners". I propose that one key issue is that such XAI products as we will next review concern themselves with a mechanistic explanation of a model's inner workings. However, the originally stated goal is one which is broader and revolves around our human *understanding* and *trusting* such models. Simply presenting illuminating what's inside the black-box and expecting the reflection to satisfy human understanding is wholly insufficient.
+It will become clear that present products fall short of the goal of "[enabling] human users to understand, appropriately trust, and effectively manage the emerging generation of artificially intelligent partners". I propose that one key issue is that such XAI products as we will next review concern themselves with a mechanistic explanation of a model's inner workings. However, the originally stated goal is one which is broader and revolves around our human *understanding* and *trusting* such models. Simply illuminating what's inside the black-box and expecting the reflection to satisfy human understanding is wholly insufficient.
 
 ## Tracing important parameters through model
 
@@ -112,12 +112,18 @@ It will become clear that present products fall short of the goal of "[enabling]
 </p>
 <p align="center"><strong>Figure 5:</strong> Saliency maps of image classification results from VGG-16 Deep CNN model <a href="https://arxiv.org/pdf/1904.00605.pdf">Source</a></p>
 
+One type of approach to illuminating the AI black box is to identify what are the important features in the presented input or important weights within a model that contributes to the final output. In other words, what are salient features that produces the model output. In Figure 5, a novel "RAP" algorithm for computing saliency maps for Deep CNNs is proposed and compared against other common algorithms. What one hopes to achieve here is an indication for what went on in the processing of the AI model such that the result is what it is. Saliency maps are post-hoc attempts to identify contributing factors to a model's final determination based on some measure of 'relevance'.
+
+Such an approach is representative of the first broad thrust of the XAI movement: developing tools that allows us to interact intelligibly with our AI models. This approach attempts to answer a very human question: What factored into your decision? Furthermore, as engineers, it also allows us to identify processes happening within our models and fulfil the role of *control* or *improve*-type explanations.
+
 ## Employing self-attention masking
 
 <p align="center">
   <img src="/XAI/img/selective_attention.gif">
 </p>
 <p align="center"><strong>Figure 6:</strong> Overlay of selected input regions model attends to <a href="https://ai.googleblog.com/2020/06/using-selective-attention-in.html">Source</a></p>
+
+An alternative to asking post-hoc questions is to modify our models themselves to function in a way that is 'self-explanatory'. This approach is typically references as interpretable AI rather than explanatory AI.
 
 ## Learning to provide explanatory [text]
 
