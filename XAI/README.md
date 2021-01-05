@@ -114,7 +114,7 @@ It will become clear that present products fall short of the goal of "[enabling]
 
 One type of approach to illuminating the AI black box is to identify what are the important features in the presented input or important weights within a model that contributes to the final output. In other words, what are salient features that produces the model output. In Figure 5, a novel "RAP" algorithm for computing saliency maps for Deep CNNs is proposed and compared against other common algorithms. What one hopes to achieve here is an indication for what went on in the processing of the AI model such that the result is what it is. Saliency maps are post-hoc attempts to identify contributing factors to a model's final determination based on some measure of 'relevance'.
 
-Such an approach is representative of the first broad thrust of the XAI movement: developing tools that allows us to interact intelligibly with our AI models. This approach attempts to answer a very human question: What factored into your decision? Furthermore, as engineers, it also allows us to identify processes happening within our models and fulfil the role of *control* or *improve*-type explanations.
+Such an approach is representative of the first broad thrust of the XAI movement: developing tools that allows us to interact intelligibly with our AI models. This approach attempts to answer a very human question: What factored into your decision? Furthermore, as engineers, it also allows us to identify processes happening within our models and fulfil the role of *control* or *improve*-type explanations. However, as can be seen with the non-RAP methods of computing saliency maps in this example, how are we to evaluate the results from such saliency maps? It appears that we may judge such output with preconceived notions of object-dependent classification and prefer the RAP method as it concurs with the foreground object having most relevance in the determination of image label. It is unclear what such saliency maps offer as explanation in incorrect cases where it is likely that the highlighted highly relevant foreground object has been incorrectly classified. 
 
 ## Learning to provide explanatory [text]
 
@@ -122,6 +122,11 @@ Such an approach is representative of the first broad thrust of the XAI movement
   <img src="/XAI/img/productive_visual_explanations.png">
 </p>
 <p align="center"><strong>Figure 6:</strong> Training a model to generate explanatory text alongside classification output <a href="https://arxiv.org/pdf/1603.08507v1.pdf">Source</a></p>
+
+Rather than examining what input features were relevant to the model output, some efforts have instead focused on the generation of explanations alongside model output. In this example, the paper proposes an additional model layer which generates texts as an explanation for why the image is classified thusly. Although this approach appears initially to be intuitive, it has not picked up much traction in recent years (the paper was published in 2016). Here, we can offer 2 reasons why this is so:
+
+1. Learning to produce explanatory text in addition to classified label for images requires a labeled training dataset with proper explanations which is a highly intensive process without much available big-data to train on.
+2. Although the explanations in the example appears to match with the model output, we cannot be sure that the process used to output the explanations actually cohere with whatever processing occurred to procude the model classification output. It could very well be the case that some independent part of the trained model was utilized in producing explanations entirely separate from the part of the model that produces a classification output.
 
 ## Employing self-attention masking
 
@@ -141,6 +146,8 @@ An alternative to asking post-hoc questions is to modify our models themselves t
   <img src="/XAI/img/gam_interpretable_architecture.png">
 </p>
 <p align="center"><strong>Figure 8:</strong> This paper introduces the Neural Additive Model, a more interpretable network architecture for classification <a href="https://arxiv.org/pdf/2004.13912.pdf">Source</a></p>
+
+Even though utilizing attention to limit the input given to models reduces the domain under which models make their decision, it is still quite similar 
 
 ## Case study: Google XAI Whitepaper
 
