@@ -160,7 +160,18 @@ Even though utilizing attention to limit the input given to models reduces the d
 
 ## Case study: Google XAI Whitepaper
 
-Now that we have reviewed some of the different types of approaches in research literature, we can apply the same critical lens to today's commercial offerings. Google offers a Cloud Explainable AI service (beta) alongside its AutoML and AI Platform products. We will use the accompanying [whitepaper](https://storage.googleapis.com/cloud-ai-whitepapers/AI%20Explainability%20Whitepaper.pdf) as a reference to its product offerings. 
+Now that we have reviewed some of the different types of approaches in research literature, we can apply the same critical lens to today's commercial offerings. Google offers a Cloud Explainable AI service (beta) alongside its AutoML and AI Platform products. We will use the accompanying [whitepaper](https://storage.googleapis.com/cloud-ai-whitepapers/AI%20Explainability%20Whitepaper.pdf) and [product site](https://cloud.google.com/explainable-ai) as references to its product offerings.
+
+<p align="center">
+  <img src="/XAI/img/google_explainable_ai.png">
+</p>
+<p align="center"><strong>Figure 9:</strong> An overview of the features Google's Cloud Explainable AI service offers <a href="https://cloud.google.com/explainable-ai#features">Source</a></p>
+
+Google's Cloud Explainable AI offers 3 main services: AI Explanations, What-If Tool and Continuous evaluation. It should be pointed out that this product is model-agnostic, meaning that there is no modification to the underlying model, rather it is a tool to be applied on-top of a trained model. In other words, a post-hoc approach. AI Explanation service offers 'Feature Attributions': "signed per-feature attribution score proportional to the feature's contribution to the model's prediction" [cite Whitepaper]. This is similar to the first class of saliency maps we reviewed. More interesting are the What-If and Continuous evaluation tools.
+
+Rather than simply statically identifying the salient features in a model's prediction, the [What-If Tool](https://pair-code.github.io/what-if-tool/index.html#demos) allows one to modify datapoints and introduce what-if sample points to observe the examined model's predictions. This is an interactive tool that can be deployed after a model has been trained and serve as a way of visualizing how the model performs on different datasets. Lastly, the [Continuous evaluation tool](https://cloud.google.com/ai-platform/prediction/docs/continuous-evaluation) monitors a deployed model by sampling datapoints against human-evaluated results. For example, a model can be queried with a image classification request and the same image is sent to the deployed AI model as well as human evaluators. The results from the model is then compared against human evaluation responses and reported intermittently.
+
+Although the methodology underlying extracting of metrics and pertinent information from AI black boxes is similar to the first class of XAI (saliency maps), Google's Explainable AI takes a promising step by shifting focus from the raw numbers to interaction with human evaluators of the model. Explanations as per this tool is driven not only by mathematical tools employed to extract pertinent features relevant to model predictions but through interactions with human questioners.
 
 # What is an Explanation? - Perspectives from Philosophy
 
