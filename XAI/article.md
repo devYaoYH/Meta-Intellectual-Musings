@@ -1,6 +1,4 @@
-> Alice and Bob are driving along a road in the city. The sky was dark and visibility was poor. Flashes of lightning occasionally lit up the foreboding cityscape, painting sawtooth patterns along the road ahead. The staccato of raindrops on the windshield gradually turned into a lullaby. Suddenly, a few meters ahead, an irregular shadow stepped into view, jolting Alice into full alertness. On reflex, Alice spins the wheel around and narrowly avoids the shadow. The wheels skidded along the wet road and for a moment the car spins out of control, crashing headfirst into the sidewalk. Right behind Alice in another car, Bob continued on without pause and the irregular shadow dissipated into a mist of water as the car drove over a puddle. So sets the scene for our hypothetical parable.
-
-# Introduction
+# Limits of XAI
 
 *“Science gathers knowledge faster than Society gathers wisdom” – Isaac Asimov.*
 
@@ -82,9 +80,20 @@ The first point highlights the pitfall that by constructing tools which help rev
 
 The second point is hinted at within Google's whitepaper: "Similar to how model predictions are prone to adversarial attacks, attributions are prone to the same". Even with attributions at hand, comparing between attributions given for a correct classification versus an incorrect classification may reveal no useful differences in what salient features have been identified. Alternatively, two differrent sets of salient features may be identified for the same classification problem instance. Once again this makes us question just what such saliency information provides us with other than perhaps confirming some preconceived human bias as to what should have been pertinent features our decision process needs to take into account.
 
-# Alice and Bob
+# Types of Explanations
+
+With the current extent of XAI in mind, we can finally review its limits by considering just what sort of explanations are produced by XAI methods.
+
+Classically, Aristotle classified explanations into 4 categories [[Andrea Falcon, Stanford Encyclopedia of Philosophy: Aristotle on Causality](https://plato.stanford.edu/entries/aristotle-causality/#FouCau)]:
+
+- Efficient Cause: "primary source of the change"
+- Final Cause: "the end, that for the sake of which a thing is done"
+- Formal Cause: "the form"
+- Material Cause: "that out of which"
 
 # Distinguishing between Diagnostics and Explanation
+
+I will argue that present techniques of XAI produces not explanations but diagnostics. Explanations as a social construct should strictly include humans in the loop and it would be best to treat present results from the field of XAI as mere diagnostic tools to avoid confusion and granting such tools too much authority. 
 
 # Explanations exist outside AI Models
 
@@ -100,8 +109,8 @@ XAI does not only serve the purpose of examining presently available systems in 
 
 1. [NeurIPS 2020 Blogpost] https://neuripsconf.medium.com/getting-started-with-neurips-2020-e350f9b39c28
 2. [DARPA XAI] https://www.darpa.mil/program/explainable-artificial-intelligence
-3. [panda-gibbon image adversary] https://openai.com/blog/adversarial-example-research/
-4. [racist twitter chatbot] https://www.theverge.com/2016/3/24/11297050/tay-microsoft-chatbot-racist
+3. [Panda-gibbon image adversary] https://openai.com/blog/adversarial-example-research/
+4. [Microsoft Tay twitter chatbot] https://www.theverge.com/2016/3/24/11297050/tay-microsoft-chatbot-racist
 5. [Giulia et.al: Explanable Artificial Intelligence: a Systematic Review] https://arxiv.org/pdf/2006.00093.pdf
 6. [Move 37 by AlphaGo] https://www.wired.com/2016/03/two-moves-alphago-lee-sedol-redefined-future/
 7. [Google Cloud XAI Whitepaper] https://storage.googleapis.com/cloud-ai-whitepapers/AI%20Explainability%20Whitepaper.pdf
