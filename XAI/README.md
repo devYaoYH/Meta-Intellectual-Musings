@@ -6,7 +6,7 @@ This is the verbose version of the document, for a more concise take along a sim
 
 ## Table of contents:
 
-- [What, What and How is XAI?](/XAI#what-why-and-how-is-xai)
+- [What, Why and How is XAI?](/XAI#what-why-and-how-is-xai)
 - [What requires explanining? - When Models Fail](/XAI#what-requires-explaining---when-models-fail)
   - [The case of the misidentified pand](/XAI#the-case-of-the-misidentified-panda)
   - [The case of the inappropriate chatbot](/XAI#the-case-of-the-inappropriate-chatbot)
@@ -203,3 +203,4 @@ XAI does not only serve the purpose of examining presently available systems in 
 10. [SotA Saliency Map] https://arxiv.org/pdf/1904.00605.pdf
 11. [NAM interpretable architecture] https://arxiv.org/pdf/2004.13912.pdf
 12. [Google Cloud XAI Whitepaper] https://storage.googleapis.com/cloud-ai-whitepapers/AI%20Explainability%20Whitepaper.pdf
+13. [Rudin 2019: Stop Explaining Black Box ... and use Interpretable Models instead] https://arxiv.org/pdf/1811.10154.pdf

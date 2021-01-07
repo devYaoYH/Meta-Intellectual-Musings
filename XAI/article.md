@@ -71,7 +71,16 @@ Google's Cloud Explainable AI offers 3 main services: AI Explanations, What-If T
 
 Rather than simply statically identifying the salient features in a model's prediction, the [What-If Tool](https://pair-code.github.io/what-if-tool/index.html#demos) allows one to modify datapoints and introduce what-if sample points to observe the examined model's predictions. This is an interactive tool that can be deployed after a model has been trained and serve as a way of visualizing how the model performs on different datasets. Lastly, the [Continuous evaluation tool](https://cloud.google.com/ai-platform/prediction/docs/continuous-evaluation) monitors a deployed model by sampling datapoints against human-evaluated results. For example, a model can be queried with a image classification request and the same image is sent to the deployed AI model as well as human evaluators. The results from the model is then compared against human evaluation responses and reported intermittently.
 
-Google's Explainable AI takes a promising step by shifting focus from the raw numbers to interaction with human evaluators of the model. Explanations as per this tool is driven not only by mathematical tools employed to extract pertinent features relevant to model predictions but through interactions with human questioners. However, 
+Google's Explainable AI takes a promising step by shifting focus from the raw numbers to interaction with human evaluators of the model. Explanations as per this tool is driven not only by mathematical tools employed to extract pertinent features relevant to model predictions but through interactions with human questioners. However, at its core, such a product is still driven by a post-hoc approach: treating models as something aking to an engine and examining mechanistic details within them to produce 'explanations'.
+
+There is pressure for XAI to move away from asking post-hoc questions to modifing our models themselves to function in a way that is 'self-explanatory'. This approach is typically referenced as interpretable AI rather than explanable AI. In her widely cited 2019 paper, Cynthia Rudin writes that "trying to *explain* black box models, rather than creating models that are *interpretable* in the first place, is likely to perpetuate bad practices and can potentially cause catastrophic harm to society". She points out 2 main reasons for her assessment [[Rudin, 2019](https://arxiv.org/pdf/1811.10154.pdf)]:
+
+1. Explainable ML methods provide explanations that are not faithful to what the original model computes
+2. Explanations often do not make sense, or do not provide enough detail to understand what the black box is doing
+
+The first point highlights the pitfall that by constructing tools which help reveal *some* inner working of the black box model, we are not guaranteed to find *the* inner workings which are pertinent in the model's decision processes. There are many ways in which salient features can be identified from model output and inputs. Google's product utilizes a Sampled Shapley measure, many alternatives exist in research literature and it has been pointed out that we currently do not have a good way to evaluate which saliency measure should be preferred [[Giulia et.al, 2020](https://arxiv.org/pdf/2006.00093.pdf)].
+
+The second point is hinted at within Google's whitepaper: "Similar to how model predictions are prone to adversarial attacks, attributions are prone to the same". Even with explanations at hand, comparing between explanations given for a correct classification versus an incorrect classification may reveal no useful differences in what salient features have been identified. Alternatively, two differrent sets of salient features may be identified for the same classification problem instance, which again makes us question just what such saliency information provides us with.
 
 # Alice and Bob
 
@@ -89,6 +98,7 @@ XAI does not only serve the purpose of examining presently available systems in 
 2. [DARPA XAI] https://www.darpa.mil/program/explainable-artificial-intelligence
 3. [panda-gibbon image adversary] https://openai.com/blog/adversarial-example-research/
 4. [racist twitter chatbot] https://www.theverge.com/2016/3/24/11297050/tay-microsoft-chatbot-racist
-5. [Explanable Artificial Intelligence: a Systematic Review] https://arxiv.org/pdf/2006.00093.pdf
+5. [Giulia et.al: Explanable Artificial Intelligence: a Systematic Review] https://arxiv.org/pdf/2006.00093.pdf
 6. [Move 37 by AlphaGo] https://www.wired.com/2016/03/two-moves-alphago-lee-sedol-redefined-future/
 7. [Google Cloud XAI Whitepaper] https://storage.googleapis.com/cloud-ai-whitepapers/AI%20Explainability%20Whitepaper.pdf
+8. [Rudin 2019: Stop Explaining Black Box ... and use Interpretable Models instead] https://arxiv.org/pdf/1811.10154.pdf
