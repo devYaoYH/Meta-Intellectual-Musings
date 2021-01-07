@@ -56,7 +56,9 @@ Against a background of increasingly pressing problems with today's AI models, t
 
 For the earlier examples of adversarial attacks, it is clear that the role of explanations in those cases would be to improve our ability to detect such possible flaws in our models as well as make improvements to defend against these adversarial attacks. Furthermore, in such cases as the unfortunate Tesla incident, the ability to offer explanations as to why its autopilot made the decisions it did could add weight in a legal setting. Lastly, explanations could elucidate AlphaGo's famous 37th move against Lee Sedol that expert commentators saw as a "very strange move" and one not within human playbooks [[WIRED](https://www.wired.com/2016/03/two-moves-alphago-lee-sedol-redefined-future/)].
 
-Crucially, we observe that the review identified roles of explanations which are mostly post-hoc and focused around the actions and workings of the model. This is a first indication of the limits of what we can come to expect from the XAI movement, it is very much an engineering field that currently looks inwards to produce tools which help to better such models. Contrasted against the problems it attempts to position itself to solve, such an engineering focus appears lacking. This is not to dismiss the importance of such tools currently produced by XAI, rather, it is a call to reign back some of our expectations for this emerging field.
+Crucially, we observe that the review identified roles of explanations which are mostly post-hoc and focused around the actions and workings of the model. This is a first indication of the limits of what we can come to expect from the XAI movement, it is very much an engineering field that currently looks inwards to produce tools which help to better such models. Contrasted against the problems it attempts to position itself to solve, such an engineering focus appears lacking. This is not to dismiss the importance of such tools currently produced by XAI, rather, it is a call to reign back some of our expectations for this emerging field due to the nature of questions we pose it.
+
+There are two types of situations requiring explanations. In the first case, we wish to interrogate whether our models have indeed functioned in a way that we designed it to or to determine that they are functioning in an expected fashion. This is the type of situation involving adversarial examples in the misidentification of images by image classification models. In the second case, even if we have a correctly functioning model, if it provides unsuitable results in context of its application, we should wish to interrogate this model for an explanation as to why it has behaved so. When we employ AI models within a *social* context, then it no longer operates as an isolated tool but one which is embedded in and for which we require *social* explanations. It is the first type of situations that calls for and can be resolved by XAI methods. However, to expect XAI to supply explanations for the second would be currently unrealistic and wholly insufficient.
 
 # Case study: Google Cloud Explainable AI
 
@@ -71,7 +73,7 @@ Rather than simply statically identifying the salient features in a model's pred
 
 Google's Explainable AI takes a promising step by shifting focus from the raw numbers to interaction with human evaluators of the model. Explanations as per this tool is driven not only by mathematical tools employed to extract pertinent features relevant to model predictions but through interactions with human questioners. However, at its core, such a product is still driven by a post-hoc approach: treating models as something aking to an engine and examining mechanistic details within them to produce 'explanations'.
 
-There is pressure for XAI to move away from asking post-hoc questions to modifing our models themselves to function in a way that is 'self-explanatory'. This approach is typically referenced as interpretable AI rather than explanable AI. In her widely cited 2019 paper, Cynthia Rudin writes that "trying to *explain* black box models, rather than creating models that are *interpretable* in the first place, is likely to perpetuate bad practices and can potentially cause catastrophic harm to society". She points out 2 main reasons for her assessment [[Rudin, 2019](https://arxiv.org/pdf/1811.10154.pdf)]:
+There is pressure for XAI to move away from asking post-hoc questions to modifing our models themselves to function in a way that is 'self-explanatory', in other words, for us to prefer interpretable AI rather than explanatory AI. In her widely cited 2019 paper, Cynthia Rudin writes that "trying to *explain* black box models, rather than creating models that are *interpretable* in the first place, is likely to perpetuate bad practices and can potentially cause catastrophic harm to society". She points out 2 main reasons for her assessment [[Rudin, 2019](https://arxiv.org/pdf/1811.10154.pdf)]:
 
 1. Explainable ML methods provide explanations that are not faithful to what the original model computes
 2. Explanations often do not make sense, or do not provide enough detail to understand what the black box is doing
@@ -82,22 +84,30 @@ The second point is hinted at within Google's whitepaper: "Similar to how model 
 
 # Types of Explanations
 
-With the current extent of XAI in mind, we can finally review its limits by considering just what sort of explanations are produced by XAI methods.
+With the current extent of XAI in mind, both post-hoc and ante-hoc approaches, we can finally review its limits by considering more broadly just what sort of explanations are produced by XAI methods. Classically, Aristotle classified explanations into 4 categories [[Andrea Falcon, Stanford Encyclopedia of Philosophy: Aristotle on Causality](https://plato.stanford.edu/entries/aristotle-causality/#FouCau)]:
 
-Classically, Aristotle classified explanations into 4 categories [[Andrea Falcon, Stanford Encyclopedia of Philosophy: Aristotle on Causality](https://plato.stanford.edu/entries/aristotle-causality/#FouCau)]:
+- Efficient Cause: "primary source of the change" (Causal explanation)
+- Final Cause: "the end, that for the sake of which a thing is done" (Functional explanation)
+- Formal Cause: "the form" (Categorical explanation)
+- Material Cause: "that out of which" (Constituent explanation)
 
-- Efficient Cause: "primary source of the change"
-- Final Cause: "the end, that for the sake of which a thing is done"
-- Formal Cause: "the form"
-- Material Cause: "that out of which"
+These four categories broadly guide what kind of answers we give to 'why' questions. Why is something the way it is? We can answer such a question by examining the chain of causes that led to the even under question (causal explanation). We can also refer to the function of the event to draw answers from. For some events the heuristic of category membership may be sufficient, though more often than not such a heuristic is prone to bias. Lastly, we can also refer to the parts that makes up the event under question for an explanation (what it consists in). These forms of explanations are all within reach of present-day XAI methods as an examination of the model under question will suffice. However, there is yet another form of explanations, one which we briefly pointed out earlier: *social* explanations that XAI will find difficulty in addressing.
+
+Tania Lombrozo points out that explanations are both a product and a process [[Tania Lombrozo, 2006](https://www.sciencedirect.com/science/article/pii/S1364661306002117)]. In Tim Miller's review of XAI from a social sciences perspective, he builds upon this and argues that there are 3 areas of explanations we need to consider [[Tim Miller, 2018](https://arxiv.org/pdf/1706.07269.pdf)]:
+
+1. Cognitive process: "process of abductive inference for 'filling the gaps' to determine an explanation for a given event"
+2. Product: "explanation that results from the cognitive process"
+3. Social process: "transferring knowledge between explainer and explainee ... goal is that the explainee has enough information to understant the *causes* of the event"
+
+
 
 # Distinguishing between Diagnostics and Explanation
 
-I will argue that present techniques of XAI produces not explanations but diagnostics. Explanations as a social construct should strictly include humans in the loop and it would be best to treat present results from the field of XAI as mere diagnostic tools to avoid confusion and granting such tools too much authority. 
+I will argue that present techniques of XAI produces not explanations but diagnostics. Explanations as a social construct should strictly include humans in the loop and it would be prudent to treat present results from the field of XAI as mere diagnostic tools to avoid confusion and granting such tools too much authority. 
 
 # Explanations exist outside AI Models
 
-Giulia and Luca observed in their review of XAI that "very few scholars have proposed approaches for evaluating such layer of explainability, either proposing formal, objective metrics or involving human-centered evaluation with model designers and end-users." [[Giulia et.al, 2020](https://arxiv.org/pdf/2006.00093.pdf)].
+The fight for illuminating what's within our black box AI models or devising non black box AI models is indeed laudable. However, we need to consider that what we consider as 'explanations' do not have a fixed mathematical nature unlike the methods of examination proposed by XAI. Giulia and Luca observed in their review of XAI that "very few scholars have proposed approaches for evaluating such layer of explainability, either proposing formal, objective metrics or involving human-centered evaluation with model designers and end-users." [[Giulia et.al, 2020](https://arxiv.org/pdf/2006.00093.pdf)]. 
 
 # XAI not merely as a way of looking back, but looking forwards
 
@@ -111,7 +121,9 @@ XAI does not only serve the purpose of examining presently available systems in 
 2. [DARPA XAI] https://www.darpa.mil/program/explainable-artificial-intelligence
 3. [Panda-gibbon image adversary] https://openai.com/blog/adversarial-example-research/
 4. [Microsoft Tay twitter chatbot] https://www.theverge.com/2016/3/24/11297050/tay-microsoft-chatbot-racist
-5. [Giulia et.al: Explanable Artificial Intelligence: a Systematic Review] https://arxiv.org/pdf/2006.00093.pdf
+5. [Giulia et.al, 2020, Explanable Artificial Intelligence: a Systematic Review] https://arxiv.org/pdf/2006.00093.pdf
 6. [Move 37 by AlphaGo] https://www.wired.com/2016/03/two-moves-alphago-lee-sedol-redefined-future/
 7. [Google Cloud XAI Whitepaper] https://storage.googleapis.com/cloud-ai-whitepapers/AI%20Explainability%20Whitepaper.pdf
-8. [Rudin 2019: Stop Explaining Black Box ... and use Interpretable Models instead] https://arxiv.org/pdf/1811.10154.pdf
+8. [Rudin, 2019, Stop Explaining Black Box ... and use Interpretable Models instead] https://arxiv.org/pdf/1811.10154.pdf
+9. [Tania Lombrozo, 2006, The structure and function of explanations] https://www.sciencedirect.com/science/article/pii/S1364661306002117
+10. [Tim Miller, 2018, Explanation in Artificial Intelligence: Insights from the Social Sciences] https://arxiv.org/pdf/1706.07269.pdf
