@@ -4,8 +4,8 @@ Part blog, part experiment in using software collaboration tool for written work
 
 <p align="center">
   <span>
-    <img style="max-width:300px;height:auto;" src="https://i.redd.it/4wke09vmvin51.jpg">
     <img style="max-width:300px;height:auto;" src="https://i.redd.it/v5mxi7u1ex251.png">
+    <img style="max-width:300px;height:auto;" src="https://i.redd.it/4wke09vmvin51.jpg">
   </span>
 </p>
 <p align="center"><a href="https://www.reddit.com/r/ProgrammerHumor/comments/gwljeh/because_your_side_projects_are_just_an_excuse_to/">Image 1 Source</a> | <a href="https://www.reddit.com/r/ProgrammerHumor/comments/itwxl5/shut_up/">Image 2 Source</a></p>
