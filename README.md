@@ -16,8 +16,4 @@ Unless otherwise stated, all views and writing are my own personal opinion and d
 
 # Citations
 
-I would treat this collection of work as a blog and citing documents within this repository as aking to blog posts in whatever format one currently prefers.
-
-# Collaboration Policy
-
-There is currently no plan for public collaboration in this repository. However, if one wishes to correspond, one can reach me at devyaoyh@gmail.com.
+I would treat this collection of work as a blog and citing documents within this repository as akin to blog posts in whatever format one currently prefers.
