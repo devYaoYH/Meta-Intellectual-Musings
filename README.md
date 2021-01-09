@@ -13,7 +13,11 @@ Unless otherwise stated, all views and writing are my own personal opinion and d
 
 # Citations
 
-I would treat this collection of work as a blog and citing documents within this repository as akin to blog posts in whatever format one currently prefers.
+I would treat this collection of work as a blog and citing documents within this repository as akin to blog posts in whatever style one currently prefers.
+
+## Example (MLA):
+
+Yao Yiheng. "Limits of XAI", *Meta Intellectual Musings*, Github, https://github.com/devYaoYH/Meta-Intellectual-Musings/blob/master/XAI/article.md.
 
 # Bonus: Relevant memes
 
