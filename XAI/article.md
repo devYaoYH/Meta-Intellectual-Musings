@@ -16,8 +16,8 @@ The current rate at which AI gains competence vastly outstrips the rate at which
 
 From the above DARPA definition of XAI, we can extract two broad thrusts of the movement:
 
-1. Develop tools to interact intelligibly with AI models
-2. Develop AI models which are more transparent and interpretable
+1. Develop tools to interact intelligibly with AI models (Explanatory AI)
+2. Develop AI models which are more transparent and interpretable (Interpretable AI)
 
 The two broad thrusts align with the two stages of XAI methods as identified by a review of research literature in XAI by Giulia and Luca: post-hoc and ante-hoc [[Giulia et.al, 2020](https://arxiv.org/pdf/2006.00093.pdf)]. Post-hoc meaning *after the matter* of model output and Ante-hoc meaning *before the matter* of model output. Explanatory methods aligning with post-hoc stage are tools which attempts to review and explain in hindsight why the model has produced the outputs that it has. In contrast, Interpretable methods are focued around designing models which utilize inherently interpretable methods to arrive at their outputs. An example is designing simplier, more linear network architectures instead of an obfusicated architecture such as Deep Convolutional Neural Networks.
 
@@ -73,6 +73,8 @@ Rather than simply statically identifying the salient features in a model's pred
 
 Google's Explainable AI takes a promising step by shifting focus from the raw numbers to interaction with human evaluators of the model. Explanations as per this tool is driven not only by mathematical tools employed to extract pertinent features relevant to model predictions but through interactions with human questioners. However, at its core, such a product is still driven by a post-hoc approach: treating models as something aking to an engine and examining mechanistic details within them to produce 'explanations'.
 
+### Explanatory v.s. Interpretable AI
+
 There is pressure for XAI to move away from asking post-hoc questions to modifing our models themselves to function in a way that is 'self-explanatory', in other words, for us to prefer interpretable AI rather than explanatory AI. In her widely cited 2019 paper, Cynthia Rudin writes that "trying to *explain* black box models, rather than creating models that are *interpretable* in the first place, is likely to perpetuate bad practices and can potentially cause catastrophic harm to society". She points out 2 main reasons for her assessment [[Rudin, 2019](https://arxiv.org/pdf/1811.10154.pdf)]:
 
 1. Explainable ML methods provide explanations that are not faithful to what the original model computes
@@ -117,17 +119,25 @@ In a similar fashion, our investigations into AI models must not stop from uncov
 
 # XAI not merely as a way of looking back, but looking forwards
 
-It would be unfair at this point to burden XAI with too much that lies outside the scope of its goals. 
+We started with defining goals for XAI and identified two main approaches taken so far: Explanatory AI and Interpretable AI. Next, we identified that the current focus of XAI is to develop methods that looks into our AI models to produce explanations. Thereafter, we reviewed how explanations help in cases where our AI models have failed in addition to a review of a commercial XAI product, Google's Cloud Explanable AI. Finally, we disambiguated what types of explanations exist and made the discrimination between diagnostics and explanations, arguing that current XAI results fall into the former category of diagnostics.
 
-However, there is another direction XAI can take that is somewhat distinct from the two previous thrusts identified:
+Admittedly XAI is a fast developing field with fluid goals and it would be unfair at this point to burden XAI with too much that lies outside its scope. Although broadly, like the DARPA definition, we want to be able to understand and trust AI models that we incresingly find making decisions with social impact (be it bank loans, filtering resumes, or driverless cars). And to this end, we find that the emerging field of XAI holds most promise in resolving this gap in our understanding. In some sense, we are directing our questions surrounding the justification of using AI models towards this field of XAI, hinging on it producing satisfactory explanations that fulfils our need for such justifications.
 
-3. Bake into AI models an awareness of its internal processes
+However, we need to acknowledge that XAI is very much an engineering discipline and what explanations we require for the judicial usage of AI models in a social setting may exceed the current boundaries of what it can produce. With this worry, many reviews of XAI have suggested that it incoporate methods and studies from diverse disciplines such as the social sciences, philosophy and law. To this end, I shall make two closing recommendations for the field of XAI.
 
-This third direction I argue is an underlying goal that can drive the previous two to fruition as a result of fulfiling this goal as well.
+The first short-term recommendation is to reign back some of our present hopes and expectations for XAI by shifting our perspective to view current XAI products as mere diagnostic tools rather than full-fledged explanations. This shift would hopefully prompt some hesitation and additional requirements onto current XAI products by not considering results from the field as 'explanations' in the full, socially-rich sense of the term.
 
-[Rosenberg ratiocinative constraint here]
+The second long-term recommendation is to identify an additional direction XAI can take that is somewhat distinct from the two previous thrusts identified:
 
-XAI does not only serve the purpose of examining presently available systems in an effort to *make sense of* how and why they function but could further serve the purpose of pushing us towards truely intelligent systems.
+3. Bake into AI models an awareness of its internal processes (Ratiocinative AI)
+
+This third direction I argue is an underlying goal that can drive the previous two to fruition as a result of fulfiling this goal as well. When multi-layer artificial neural networks were first proposed in the 1980s and 1990s, a rich debate in Philosophy erupted from the proposed shift away from symbolic reasoning systems (expert systems) towards a distributed connectionist paradigm (deep neural networks). Much of the hesitation in philosophy towards endorsing the connectionist paradigm as one that can stand up to a theory for our notion of cognition and intelligence is that they do not appear to be able to perform the feats of propositional logic that is the cornerstone of human reasoning capabilities.
+
+In Rosenberg's critical take on connectionism, *Connectionism and Cognition*, he argues that the "mere exercise of a discrimination capacity, however complex, is not yet an example of *cognition*" [(Jay F. Rosenberg, 1990, p297)](https://philosophy.tamucc.edu/graphics/berkich/texts/rosenberg_jay-connectionism_and_cognition.pdf) and identifies connectionist networks as capable of merely discrimination by following certain rules. Deep neural networks today still, however powerful, *are* in fact only discriminating between classes of labels. In addition to being rule-conforming (rational), Rosenberg argues in his paper that for truly cognisant systems, they should be rule-aware (ratiocinative) as well. Just so, I believe that for us to eventually develop tools that enable fruitful dialogue between humans and our AI models, we should imbue our AI models with an awareness of its internal processes.
+
+What this awareness should be and how it can be implemented is currently unclear. However, present research in Reinforcement Learning agents paints a promising path for us to achieve this goal. Building on top of its previous successes, DeepMind's recent MuZero agent is able to learn both the rules surrounding permissible actions within its environment as well as an optimal policy to act within this environment [[DeepMind, MuZero](https://deepmind.com/blog/article/muzero-mastering-go-chess-shogi-and-atari-without-rules)]. The level of 'internal processes' should also be disambiguated. Less so do we ask for an explanation on why we have misheard something than why we have acted upon such false information in the way that we have (explanation focus on why driverless car got into an accident rather than why the stop sign was misclassified). MuZero's awareness of internal rules and policies that is learnt through interacting with the environment is similarly built upon deep neural networks, but the level at which we can direct it questions appears to conform more to the type of social explanations that presupposes an awareness of rules and agency to change those rules than current AI models.
+
+In time, the XAI movement can not only serve the purpose of examining presently available systems in an effort to *make sense of* how and why they function but could further serve the purpose of pushing us towards truely intelligent systems.
 
 # References
 
@@ -141,3 +151,5 @@ XAI does not only serve the purpose of examining presently available systems in 
 8. [Rudin, 2019, Stop Explaining Black Box ... and use Interpretable Models instead] https://arxiv.org/pdf/1811.10154.pdf
 9. [Tania Lombrozo, 2006, The structure and function of explanations] https://www.sciencedirect.com/science/article/pii/S1364661306002117
 10. [Tim Miller, 2018, Explanation in Artificial Intelligence: Insights from the Social Sciences] https://arxiv.org/pdf/1706.07269.pdf
+11. [Jay F. Rosenberg, 1990, Connectionism and Cognition] https://philosophy.tamucc.edu/graphics/berkich/texts/rosenberg_jay-connectionism_and_cognition.pdf
+12. [DeepMind, MuZero: Mastering Go, chess, shogi, and Atari without rules] https://deepmind.com/blog/article/muzero-mastering-go-chess-shogi-and-atari-without-rules
