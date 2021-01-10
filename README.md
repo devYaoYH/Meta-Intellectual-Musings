@@ -5,7 +5,7 @@ Part blog, part experiment in using software collaboration tool for written work
 # Table of Contents
 
 - [XAI](/XAI) [work-in-progress]
-  - [Limits of XAI](/XAI/article.md)
+  - [Limits of XAI](/XAI/limits-of-xai.md)
 
 # Disclaimer
 
@@ -17,7 +17,7 @@ I would treat this collection of work as a blog and citing documents within this
 
 ## Example (MLA):
 
-Yao Yiheng. "Limits of XAI", *Meta Intellectual Musings*, Github, https://github.com/devYaoYH/Meta-Intellectual-Musings/blob/master/XAI/article.md.
+Yao Yiheng. "Limits of XAI", *Meta Intellectual Musings*, Github, https://github.com/devYaoYH/Meta-Intellectual-Musings/blob/master/XAI/limits-of-xai.md.
 
 # Bonus: Relevant memes
 

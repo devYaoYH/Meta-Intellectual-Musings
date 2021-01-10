@@ -2,7 +2,7 @@
 
 This document is a collection of thoughts on proposal that XAI can solve many of the problems we encounter during the usage of AI models. I first outline the current trajectory of XAI, the problems in the field where explanations are proposed to help with, and the present products of XAI. Next, I introduce disambiguations on the purpose and form of explanations from a perspective of Philosophy, in particular a Philosophy of explanations in Science and justifications in Ethics. Finally, I argue that the form of explanations we seek to help with the problems in using AI models ultimately do not consist of that which lies within our Models. We have to seek explanations from outside the black-box rather than peering within. Although making transparent the inner workings will be helpful, it cannot be treated as a silver-bullet in helping us resolve issues surrounding the use of AI models in society.
 
-This is the verbose version of the document, for a more concise take along a similar direction, see [Article](/XAI/article.md).
+This is the verbose version of the document, for a more concise take along a similar direction, see [Article](/XAI/limits-of-xai.md).
 
 ## Table of contents:
 
