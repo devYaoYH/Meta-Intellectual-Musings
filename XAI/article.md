@@ -105,23 +105,29 @@ For instance, for AI models that approve bank loan, we place such a model within
 
 It is just this agency to act within social roles we place AI models in that does not exist within AI models (yet). If XAI continues to focus its gaze within models rather than looking more broadly to the environment it acts in, we will never be able to find the satisfactory explanations we seek. This is because for our present AI models, they do not contain an awareness of their internal processes nor have the agency to make changes to their model architecture.
 
-# Explanations exist outside AI Models
-
-The fight to illuminate what's within our black box AI models or devising non black box AI models to derive explanations from is indeed laudable. However, we need to consider that what we require as 'explanations' might not have a fixed mathematical nature unlike the methods of examination proposed by XAI. Giulia and Luca observed in their review of XAI that "very few scholars have proposed approaches for evaluating such layer of explainability, either proposing formal, objective metrics or involving human-centered evaluation with model designers and end-users." [[Giulia et.al, 2020](https://arxiv.org/pdf/2006.00093.pdf)]. I propose that the observed difficulty is likely due to there being no good measure of how good an explanation is distinct from the context of the explanation.
-
-[Graphics illustrating between the level of explanations we want]
-
-There is a limit as to what type of explanations we can derive from an examination of what's within AI models.
-
 # Distinguishing between Diagnostics and Explanation
 
-In the last two sections, we examined the different aspects of explanations and a class of explanations that I argue XAI currently cannot satisfactorily produce. I will next argue that it is best to view present techniques of XAI as producing not explanations but diagnostics. Explanations as a social construct should strictly include social agents (humans) in the loop and it would be prudent to treat present results from the field of XAI as mere diagnostic tools to avoid confusion and granting such tools too much authority.
+In the last section, we examined the different aspects of explanations and a class of explanations, *social* explanations, that I argue XAI currently cannot satisfactorily produce. I will next argue that it is best to view present techniques of XAI as producing not explanations but diagnostics. Explanations as a social construct should strictly include social agents (humans) in the loop and it would be prudent to treat present results from the field of XAI as mere diagnostic tools to avoid confusion and granting such tools too much authority.
+
+Not all explanations are established on the basis of diagnostics, though diagnostics can inform explanations, in particular when the sort of explanations we want are of model function rather of model behavior (in a social context). The term 'diagnostics' here is used in its dictionary definition: "methods or systems for discovering the cause of a problem" [[Cambridge Business English Dictionary](https://dictionary.cambridge.org/dictionary/english/diagnostic)]. Diagnostics for complex systems such as AI models may also serve the additional purpose during normal functioning as monitoring tools as well. Seen in this sense, the methods put forth by XAI reviewed so far would be better classified as this category of diagnostic tools rather than standing in as explanations by their own right.
+
+An analogy can be drawn to Air Crash Investigations. In the unfortunate case of airplane accidents, the recovery of the plane's [Flight Recorder](https://en.wikipedia.org/wiki/Flight_recorder) (also known as a black box) is but the first step in forming an investigative report into the accident. The data recorded by flight recorders contain a slice of the plane's flight history, preserving the state of the plane moments before the accident. From this data, investigators may be able to hypothesize what caused the accident by identifying anomalous parameters recorded by the black box. However, in many cases, the causes for airplane accidents do not lie entirely within the plane's state prior to the accident. Rather, the plane exists within the larger context of the flight industry which contains its pilots, mantainence crews, and regulations regarding flight paths and operating procedures. In addition, a key aspect of the final investigative report is to not only identify causes for the accident but recommendations for preventing future accidents from happening. Furthermore, this investigative report also serves to assuage the public of the flight industry's reliability as well as address bereaved families' concerns. In this way, explanations for airplane accidents do not merely contain the causal aspect (which may already exceed the bounds of a plane's black box) but a social aspect of fulfiling the responsibility the flight industry has to its customers.
+
+In a similar fashion, our investigations into AI models must not stop from uncovering what's within the black box (AI models), but to look beyond and place the model within its social context. But to do so, we do indeed still require transparency into the inner workings of our AI models in order to make an informed explanation of its behavior. Rather than expecting that XAI would resolve the problems we have employing AI models in a social context, we should instead acknowledge its present limits to inform what steps we still need to take to move forward.
 
 # XAI not merely as a way of looking back, but looking forwards
 
-2. Bake into AI models an awareness of its internal processes
+It would be unfair at this point to burden XAI with too much that lies outside the scope of its goals. 
 
-XAI does not only serve the purpose of examining presently available systems in an effort to *make sense of* how and why they function but could further serve the purpose of pushing us towards truely intelligent systems. [Rosenberg ratiocinative constraint here]
+However, there is another direction XAI can take that is somewhat distinct from the two previous thrusts identified:
+
+3. Bake into AI models an awareness of its internal processes
+
+This third direction I argue is an underlying goal that can drive the previous two to fruition as a result of fulfiling this goal as well.
+
+[Rosenberg ratiocinative constraint here]
+
+XAI does not only serve the purpose of examining presently available systems in an effort to *make sense of* how and why they function but could further serve the purpose of pushing us towards truely intelligent systems.
 
 # References
 
