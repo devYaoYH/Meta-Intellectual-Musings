@@ -153,3 +153,7 @@ In time, the XAI movement can not only serve the purpose of examining presently 
 10. [Tim Miller, 2018, Explanation in Artificial Intelligence: Insights from the Social Sciences] https://arxiv.org/pdf/1706.07269.pdf
 11. [Jay F. Rosenberg, 1990, Connectionism and Cognition] https://philosophy.tamucc.edu/graphics/berkich/texts/rosenberg_jay-connectionism_and_cognition.pdf
 12. [DeepMind, MuZero: Mastering Go, chess, shogi, and Atari without rules] https://deepmind.com/blog/article/muzero-mastering-go-chess-shogi-and-atari-without-rules
+
+# Authors
+
+[@devyaoyh](https://github.com/devYaoYH) Init 1 Jan 2021. Last (substantive) edit 10 Jan 2021.
