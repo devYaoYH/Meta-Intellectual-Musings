@@ -145,14 +145,15 @@ In time, the XAI movement can not only serve the purpose of examining presently 
 2. [DARPA XAI] https://www.darpa.mil/program/explainable-artificial-intelligence
 3. [Panda-gibbon image adversary] https://openai.com/blog/adversarial-example-research/
 4. [Microsoft Tay twitter chatbot] https://www.theverge.com/2016/3/24/11297050/tay-microsoft-chatbot-racist
-5. [Giulia et.al, 2020, Explanable Artificial Intelligence: a Systematic Review] https://arxiv.org/pdf/2006.00093.pdf
+5. [Giulia Vilone, Luca Longo, 2020, Explanable Artificial Intelligence: a Systematic Review] https://arxiv.org/pdf/2006.00093.pdf
 6. [Move 37 by AlphaGo] https://www.wired.com/2016/03/two-moves-alphago-lee-sedol-redefined-future/
 7. [Google Cloud XAI Whitepaper] https://storage.googleapis.com/cloud-ai-whitepapers/AI%20Explainability%20Whitepaper.pdf
-8. [Rudin, 2019, Stop Explaining Black Box ... and use Interpretable Models instead] https://arxiv.org/pdf/1811.10154.pdf
+8. [Rudin 2019: Stop Explaining Black Box Machine Learning Models for High Stakes Decisions and Use Interpretable Models instead] https://arxiv.org/pdf/1811.10154.pdf
 9. [Tania Lombrozo, 2006, The structure and function of explanations] https://www.sciencedirect.com/science/article/pii/S1364661306002117
 10. [Tim Miller, 2018, Explanation in Artificial Intelligence: Insights from the Social Sciences] https://arxiv.org/pdf/1706.07269.pdf
 11. [Jay F. Rosenberg, 1990, Connectionism and Cognition] https://philosophy.tamucc.edu/graphics/berkich/texts/rosenberg_jay-connectionism_and_cognition.pdf
 12. [DeepMind, MuZero: Mastering Go, chess, shogi, and Atari without rules] https://deepmind.com/blog/article/muzero-mastering-go-chess-shogi-and-atari-without-rules
+13. [Falcon Andrea, Aristotle on Causality] https://plato.stanford.edu/entries/aristotle-causality
 
 # Authors
 

@@ -48,7 +48,7 @@ For both directions, there is a focus on unveiling the mechanistic details of pr
 
 # What requires explaining? - When Models Fail
 
-Present AI models fall broadly into 4 categories: Classification, Generation, Prediction, and Search. Classification models are predominantly implemented with Convolutional Neural Networks (CNNs), and generative models are the flip side of classification. Rather than extracting a set of hidden features from the input to seperate the set of given inputs to some set of output labels (think of image classification), generative models such as Generative Adversarial Networks (GAN) fills in the gaps and produces output similar to inputs from some hidden set of features (think of GPT-2/3 and Deepfake). Predictive models approximates some resultant state given rules and initial parameters. Examples include DeepMind's protein folding model as well as a neural network simulation of solutions to three-body problems in physics (cite paper Brutus-trained ANN). Search models see widespread use in Game-Playing agents such as AlphaGo and the venerable DeepBlue chess AI. These typically explore and assess actions with an value function in mind to optimize the final outcome of a series of chosen actions. More sophisticated search models typically would require a predictive assessment of the possible values of permissible actions, in fact, a key contributor to the success of AlphaGo is the use of a deep neural network to approximate the value of board positions.
+Present AI models fall broadly into 4 categories: Classification, Generation, Prediction, and Search. Classification models are predominantly implemented with Convolutional Neural Networks (CNNs), and generative models are the flip side of classification. Rather than extracting a set of hidden features from the input to seperate the set of given inputs to some set of output labels (think of image classification), generative models such as Generative Adversarial Networks (GAN) fills in the gaps and produces output similar to inputs from some hidden set of features (think of GPT-2/3 and Deepfake). Predictive models approximates some resultant state given rules and initial parameters. Examples include DeepMind's protein folding model as well as a neural network simulation of solutions to three-body problems in physics [[Breen et.al, 2019](https://arxiv.org/pdf/1910.07291.pdf)]. Search models see widespread use in Game-Playing agents such as AlphaGo and the venerable DeepBlue chess AI. These typically explore and assess actions with an value function in mind to optimize the final outcome of a series of chosen actions. More sophisticated search models typically would require a predictive assessment of the possible values of permissible actions, in fact, a key contributor to the success of AlphaGo is the use of a deep neural network to approximate the value of board positions.
 
 There are general issues pertaining to these classes of AI models which requires us to provide an explanation for their output. For a classification or generation model using deep neural networks, nowhere can we find explicit rules that govern the decision processes leading to their outputs. Similarly, when prediction results deviate from empirical findings, an explanation is warranted as to why there is this difference which could help in corrective measures to further improve results. Searching assumes that one has a good fit for the value function utilized in assessing actions and states which is not guaranteed. In addition, there is the ugly issue of the Value Alignment Problem: how can we ensure that AI holds our values in its best interest? Below, we shall outline a few examples of errors in AI models that require an explanation.
 
@@ -251,22 +251,23 @@ In time, the XAI movement can not only serve the purpose of examining presently 
 # References
 
 1. [AlphaFold] https://www.nature.com/articles/d41586-020-03348-4
-2. [3-Body Problem ANN simulation] https://arxiv.org/pdf/1910.07291.pdf
-3. [panda-gibbon image adversary] https://openai.com/blog/adversarial-example-research/
-4. [racist twitter chatbot] https://www.theverge.com/2016/3/24/11297050/tay-microsoft-chatbot-racist
+2. [Philip G. Breen, Christopher N. Foley, Tjarda Boekholt, Simon Portegies Zwart, 2019, Newton vs the machine: solving the chaotic three-body problem using deep neural networks] https://arxiv.org/pdf/1910.07291.pdf
+3. [Panda-gibbon image adversary] https://openai.com/blog/adversarial-example-research/
+4. [Microsoft Tay twitter chatbot] https://www.theverge.com/2016/3/24/11297050/tay-microsoft-chatbot-racist
 5. [RL goalie adversarial attack] https://bair.berkeley.edu/blog/2020/03/27/attacks/
 6. [Selective Attention Agent] https://ai.googleblog.com/2020/06/using-selective-attention-in.html
 7. [Command Responsibility Doctrine] https://www.oxfordbibliographies.com/view/document/obo-9780199796953/obo-9780199796953-0088.xml
-8. [Explanable Artificial Intelligence: a Systematic Review] https://arxiv.org/pdf/2006.00093.pdf
+8. [Giulia Vilone, Luca Longo, 2020, Explanable Artificial Intelligence: a Systematic Review] https://arxiv.org/pdf/2006.00093.pdf
 9. [Move 37 by AlphaGo] https://www.wired.com/2016/03/two-moves-alphago-lee-sedol-redefined-future/
-10. [SotA Saliency Map] https://arxiv.org/pdf/1904.00605.pdf
-11. [NAM interpretable architecture] https://arxiv.org/pdf/2004.13912.pdf
+10. [Woo-Jeoung Nam, Shir Gur, Jaesik Choi, Lior Wolf, Seong-Whan Lee, 2019, Relative Attributing Propagation: Interpreting the Comparative Contributions of Individual Units in Deep Neural Networks] https://arxiv.org/pdf/1904.00605.pdf
+11. [Rishabh Agarwal, Nicholas Frosst, Xuezhou Zhang, Rich Caruana, Geoffrey E. Hinton, 2020, Neural Additive Models: Interpretable Machine Learning with Neural Nets] https://arxiv.org/pdf/2004.13912.pdf
 12. [Google Cloud XAI Whitepaper] https://storage.googleapis.com/cloud-ai-whitepapers/AI%20Explainability%20Whitepaper.pdf
-13. [Rudin 2019: Stop Explaining Black Box ... and use Interpretable Models instead] https://arxiv.org/pdf/1811.10154.pdf
+13. [Rudin 2019: Stop Explaining Black Box Machine Learning Models for High Stakes Decisions and Use Interpretable Models instead] https://arxiv.org/pdf/1811.10154.pdf
 14. [Tania Lombrozo, 2006, The structure and function of explanations] https://www.sciencedirect.com/science/article/pii/S1364661306002117
 15. [Tim Miller, 2018, Explanation in Artificial Intelligence: Insights from the Social Sciences] https://arxiv.org/pdf/1706.07269.pdf
 16. [Jay F. Rosenberg, 1990, Connectionism and Cognition] https://philosophy.tamucc.edu/graphics/berkich/texts/rosenberg_jay-connectionism_and_cognition.pdf
 17. [DeepMind, MuZero: Mastering Go, chess, shogi, and Atari without rules] https://deepmind.com/blog/article/muzero-mastering-go-chess-shogi-and-atari-without-rules
+18. [Falcon Andrea, Aristotle on Causality] https://plato.stanford.edu/entries/aristotle-causality
 
 # Authors
 
