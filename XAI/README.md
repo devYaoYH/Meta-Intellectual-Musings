@@ -17,6 +17,7 @@ This is the verbose version of the document with more a detailed review of probl
   - [Learning to provide explanatory [text]](/XAI#learning-to-provide-explanatory-text)
   - [Employing self-attention masking](/XAI#employing-self-attention-masking)
   - [Case study: Google XAI Whitepaper](/XAI#case-study-google-xai-whitepaper)
+  - [Explanatory v.s. Interpretable AI](/XAI#explanatory-vs-interpretable-ai)
 - [What is an Explanation? - Perspectives from Philosophy](/XAI#what-is-an-explanation---perspectives-from-philosophy)
 - [Where Philosophy can help XAI](/XAI#where-philosophy-can-help-xai)
 - [Distinguishing between Diagnostics and Explanation](/XAI#distinguishing-between-diagnostics-and-explanation)
@@ -172,6 +173,17 @@ Google's Cloud Explainable AI offers 3 main services: AI Explanations, What-If T
 Rather than simply statically identifying the salient features in a model's prediction, the [What-If Tool](https://pair-code.github.io/what-if-tool/index.html#demos) allows one to modify datapoints and introduce what-if sample points to observe the examined model's predictions. This is an interactive tool that can be deployed after a model has been trained and serve as a way of visualizing how the model performs on different datasets. Lastly, the [Continuous evaluation tool](https://cloud.google.com/ai-platform/prediction/docs/continuous-evaluation) monitors a deployed model by sampling datapoints against human-evaluated results. For example, a model can be queried with an image classification request and the same image is sent to the deployed AI model as well as human evaluators. The results from the model is then compared against human evaluation responses and reported intermittently.
 
 Google's Explainable AI takes a promising step by shifting focus from the raw numbers to interaction with human evaluators of the model. Explanations as per this tool is driven not only by mathematical tools employed to extract pertinent features relevant to model predictions but through interactions with human questioners. However, at its core, such a product is still driven by a post-hoc approach: treating models as something akin to an engine and examining mechanistic details within them to produce 'explanations'.
+
+## Explanatory v.s. Interpretable AI
+
+There is pressure for XAI to move away from asking post-hoc questions to modifying our models themselves to function in a way that is 'self-explanatory', in other words, for us to prefer interpretable AI rather than explanatory AI. In her widely cited 2019 paper, Cynthia Rudin writes that "trying to *explain* black box models, rather than creating models that are *interpretable* in the first place, is likely to perpetuate bad practices and can potentially cause catastrophic harm to society". She points out 2 main reasons for her assessment [[Rudin, 2019](https://arxiv.org/pdf/1811.10154.pdf)]:
+
+1. Explainable ML methods provide explanations that are not faithful to what the original model computes
+2. Explanations often do not make sense, or do not provide enough detail to understand what the black box is doing
+
+The first point highlights the pitfall that by constructing tools which help reveal *some* inner working of the black box model, we are not guaranteed to find *the* inner workings which are pertinent in the model's decision processes. There are many ways in which salient features can be identified from model output and inputs. Google's product utilizes a Sampled Shapley measure, many alternatives exist in research literature and it has been pointed out that we currently do not have a good way to evaluate which saliency measure should be preferred [[Giulia et.al, 2020](https://arxiv.org/pdf/2006.00093.pdf)].
+
+The second point is hinted at within Google's whitepaper: "Similar to how model predictions are prone to adversarial attacks, attributions are prone to the same". Even with attributions at hand, comparing between attributions given for a correct classification versus an incorrect classification may reveal no useful differences in what salient features have been identified. Alternatively, two different sets of salient features may be identified for the same classification problem instance. Once again this makes us question just what such saliency information provides us with other than perhaps confirming some preconceived human bias as to what should have been pertinent features decision process needs to take into account.
 
 # What is an Explanation? - Perspectives from Philosophy
 
