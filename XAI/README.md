@@ -250,24 +250,29 @@ In time, the XAI movement can not only serve the purpose of examining presently 
 
 # References
 
+### Internet References
+
 1. [AlphaFold] https://www.nature.com/articles/d41586-020-03348-4
-2. [Philip G. Breen, Christopher N. Foley, Tjarda Boekholt, Simon Portegies Zwart, 2019, Newton vs the machine: solving the chaotic three-body problem using deep neural networks] https://arxiv.org/pdf/1910.07291.pdf
-3. [Panda-gibbon image adversary] https://openai.com/blog/adversarial-example-research/
-4. [Microsoft Tay twitter chatbot] https://www.theverge.com/2016/3/24/11297050/tay-microsoft-chatbot-racist
-5. [RL goalie adversarial attack] https://bair.berkeley.edu/blog/2020/03/27/attacks/
-6. [Selective Attention Agent] https://ai.googleblog.com/2020/06/using-selective-attention-in.html
-7. [Command Responsibility Doctrine] https://www.oxfordbibliographies.com/view/document/obo-9780199796953/obo-9780199796953-0088.xml
-8. [Giulia Vilone, Luca Longo, 2020, Explanable Artificial Intelligence: a Systematic Review] https://arxiv.org/pdf/2006.00093.pdf
-9. [Move 37 by AlphaGo] https://www.wired.com/2016/03/two-moves-alphago-lee-sedol-redefined-future/
-10. [Woo-Jeoung Nam, Shir Gur, Jaesik Choi, Lior Wolf, Seong-Whan Lee, 2019, Relative Attributing Propagation: Interpreting the Comparative Contributions of Individual Units in Deep Neural Networks] https://arxiv.org/pdf/1904.00605.pdf
-11. [Rishabh Agarwal, Nicholas Frosst, Xuezhou Zhang, Rich Caruana, Geoffrey E. Hinton, 2020, Neural Additive Models: Interpretable Machine Learning with Neural Nets] https://arxiv.org/pdf/2004.13912.pdf
-12. [Google Cloud XAI Whitepaper] https://storage.googleapis.com/cloud-ai-whitepapers/AI%20Explainability%20Whitepaper.pdf
-13. [Rudin 2019: Stop Explaining Black Box Machine Learning Models for High Stakes Decisions and Use Interpretable Models instead] https://arxiv.org/pdf/1811.10154.pdf
-14. [Tania Lombrozo, 2006, The structure and function of explanations] https://www.sciencedirect.com/science/article/pii/S1364661306002117
-15. [Tim Miller, 2018, Explanation in Artificial Intelligence: Insights from the Social Sciences] https://arxiv.org/pdf/1706.07269.pdf
-16. [Jay F. Rosenberg, 1990, Connectionism and Cognition] https://philosophy.tamucc.edu/graphics/berkich/texts/rosenberg_jay-connectionism_and_cognition.pdf
-17. [DeepMind, MuZero: Mastering Go, chess, shogi, and Atari without rules] https://deepmind.com/blog/article/muzero-mastering-go-chess-shogi-and-atari-without-rules
-18. [Falcon Andrea, Aristotle on Causality] https://plato.stanford.edu/entries/aristotle-causality
+2. [Panda-gibbon image adversary] https://openai.com/blog/adversarial-example-research/
+3. [Microsoft Tay twitter chatbot] https://www.theverge.com/2016/3/24/11297050/tay-microsoft-chatbot-racist
+4. [RL goalie adversarial attack] https://bair.berkeley.edu/blog/2020/03/27/attacks/
+5. [Selective Attention Agent] https://ai.googleblog.com/2020/06/using-selective-attention-in.html
+6. [Command Responsibility Doctrine] https://www.oxfordbibliographies.com/view/document/obo-9780199796953/obo-9780199796953-0088.xml
+7. [Move 37 by AlphaGo] https://www.wired.com/2016/03/two-moves-alphago-lee-sedol-redefined-future/
+8. [Google Cloud XAI Whitepaper] https://storage.googleapis.com/cloud-ai-whitepapers/AI%20Explainability%20Whitepaper.pdf
+9. [DeepMind, MuZero: Mastering Go, chess, shogi, and Atari without rules] https://deepmind.com/blog/article/muzero-mastering-go-chess-shogi-and-atari-without-rules
+10. [Falcon Andrea, Aristotle on Causality] https://plato.stanford.edu/entries/aristotle-causality
+
+### Academic Papers
+
+11. [Philip G. Breen, Christopher N. Foley, Tjarda Boekholt, Simon Portegies Zwart, 2019, Newton vs the machine: solving the chaotic three-body problem using deep neural networks](https://arxiv.org/pdf/1910.07291.pdf)
+12. [Giulia Vilone, Luca Longo, 2020, Explanable Artificial Intelligence: a Systematic Review](https://arxiv.org/pdf/2006.00093.pdf)
+13. [Woo-Jeoung Nam, Shir Gur, Jaesik Choi, Lior Wolf, Seong-Whan Lee, 2019, Relative Attributing Propagation: Interpreting the Comparative Contributions of Individual Units in Deep Neural Networks](https://arxiv.org/pdf/1904.00605.pdf)
+14. [Rishabh Agarwal, Nicholas Frosst, Xuezhou Zhang, Rich Caruana, Geoffrey E. Hinton, 2020, Neural Additive Models: Interpretable Machine Learning with Neural Nets](https://arxiv.org/pdf/2004.13912.pdf)
+15. [Rudin 2019: Stop Explaining Black Box Machine Learning Models for High Stakes Decisions and Use Interpretable Models instead](https://arxiv.org/pdf/1811.10154.pdf)
+16. [Tania Lombrozo, 2006, The structure and function of explanations](https://www.sciencedirect.com/science/article/pii/S1364661306002117)
+17. [Tim Miller, 2018, Explanation in Artificial Intelligence: Insights from the Social Sciences](https://arxiv.org/pdf/1706.07269.pdf)
+18. [Jay F. Rosenberg, 1990, Connectionism and Cognition](https://philosophy.tamucc.edu/graphics/berkich/texts/rosenberg_jay-connectionism_and_cognition.pdf)
 
 # Authors
 
