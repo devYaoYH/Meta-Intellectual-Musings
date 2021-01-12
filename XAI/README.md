@@ -1,6 +1,8 @@
-# Thoughts on Explanable AI (XAI)
+# Review of Explainable AI - Perspectives from Philosophy
 
-This document is a collection of thoughts on the proposal that XAI can solve many of the problems we encounter during the usage of AI models. I first outline the current trajectory of XAI, the problems in the field where explanations are proposed to help with, and the present products of XAI. Next, I introduce disambiguations on the purpose and form of explanations from a perspective of Philosophy, in particular a Philosophy of explanations in Science and justifications in Ethics. Finally, I argue that the form of explanations we seek to help with the problems in using AI models ultimately do not consist of that which lies within our models. We have to seek explanations from outside the black-box rather than peering within. Although making transparent the inner workings will be helpful, it cannot be treated as a silver-bullet in helping us resolve issues surrounding the use of AI models in society.
+The employment of AI models in increasingly social contexts such as approving bank loans, filtering resumes for hiring, and driverless cars raises a host of problems on how we can account for their actions and explain their decision processes. These requirements are motivated by our need to hold such models to similarly high standards as we do current practices in similar context by human actors. The difficulty arises as unlike classical Symbolic AI in the past, present day AI models are of an increasingly Connectionist design. Even the designers of the AI models struggle to understand why models provide the outputs that it does. It is hoped that the field of Explainable Artificial Intelligence (XAI), which has seen a resurgence in interest over the past decade, will be of some help in resolving this gap in our understanding of AI models and our application of them in social contexts by producing ‘explanations’. This paper is a critical review of present XAI methods and research results contrasted against a clarification on what ‘explanations’ are required of AI models in social contexts to suggest recommendations for the field.
+
+I first outline the current trajectory of XAI, the problems in the field where explanations are proposed to help with, and the present products of XAI. Next, I introduce disambiguations on the purpose and form of explanations from a perspective of Philosophy, in particular a Philosophy of explanations in Science and justifications in Ethics. Finally, I argue that the form of explanations we seek to help with the problems in using AI models ultimately do not consist of that which lies within our models. We have to seek explanations from outside the black-box rather than peering within. Although making transparent the inner workings will be helpful, it cannot be treated as a silver-bullet in helping us resolve issues surrounding the use of AI models in society.
 
 This is the verbose version of the document with more a detailed review of problems, XAI methods and philosophical perspectives. For a more concise take along a similar direction, see [Article](/XAI/limits-of-xai.md).
 
@@ -19,12 +21,8 @@ This is the verbose version of the document with more a detailed review of probl
   - [Case study: Google XAI Whitepaper](/XAI#case-study-google-xai-whitepaper)
   - [Explanatory v.s. Interpretable AI](/XAI#explanatory-vs-interpretable-ai)
 - [What is an Explanation? - Perspectives from Philosophy](/XAI#what-is-an-explanation---perspectives-from-philosophy)
-- [Where Philosophy can help XAI](/XAI#where-philosophy-can-help-xai)
 - [Distinguishing between Diagnostics and Explanation](/XAI#distinguishing-between-diagnostics-and-explanation)
-- [Explanations exist outside AI Models](/XAI#explanations-exist-outside-ai-models)
-- [Current tools of Command Responsibility](/XAI#current-tools-of-command-responsibility)
 - [XAI not merely as a way of looking back, but looking forwards](/XAI#xai-not-merely-as-a-way-of-looking-back-but-looking-forwards)
-- [The Future of XAI](/XAI#the-future-of-xai)
 - [References](/XAI#references)
 
 # What, Why and How is XAI?
@@ -109,7 +107,9 @@ For the earlier examples of adversarial attacks, it is clear that the role of ex
 
 Crucially, we observe that the review identified roles of explanations which are mostly post-hoc and focused around the actions and workings of the model. This is a first indication of the limits of what we can come to expect from the XAI movement, it is very much an engineering field that currently looks inwards to produce tools which help to better such models. Contrasted against the problems it attempts to position itself to solve, such an engineering focus appears lacking. This is not to dismiss the importance of such tools currently produced by XAI, rather, it is a call to reign back some of our expectations for this emerging field due to the nature of questions we pose it.
 
-There are two types of situations requiring explanations. In the first case, we wish to interrogate whether our models have indeed functioned in a way that we designed it to or to determine that they are functioning in an expected fashion. This is the type of situation involving adversarial examples in the misidentification of images by image classification models. In the second case, even if we have a correctly functioning model, if it provides unsuitable results in context of its application, we should wish to interrogate this model for an explanation as to why it has behaved so. When we employ AI models within a *social* context, then it no longer operates as an isolated tool but one which is embedded in and for which we require *social* explanations. It is the first type of situations that calls for and can be resolved by XAI methods. However, to expect XAI to supply explanations for the second would be currently unrealistic and wholly insufficient.
+Attempting to illuminate what's within our black box AI models or devising non black box AI models to derive explanations from is indeed laudable. However, we need to consider that what we require as 'explainations' might not have a fixed mathematical nature unlike the methods of examination proposed by XAI. Giulia and Luca observed in their review of XAI that "very few scholars have proposed approaches for evaluating such layer of explainability, either proposing formal, objective metrics or involving human-centered evaluation with model designers and end-users." [[Giulia et.al, 2020](https://arxiv.org/pdf/2006.00093.pdf)]. I propose that the observed difficulty is likely due to there being no good measure of how good an explanation is distinct from the context of the explanation.
+
+There are two types of situations requiring explanations. In the first case, we wish to interrogate whether our models have indeed functioned in a way that we designed it to or to determine that they are functioning in an expected fashion. This is the type of situation involving adversarial examples in the misidentification of images by image classification models. In the second case, even if we have a correctly functioning model, if it provides unsuitable results in context of its application, we should wish to interrogate this model for an explanation as to why it has behaved so. When we employ AI models within a *social* context, then it no longer operates as an isolated tool but one which is embedded in and for which we require *social* explanations. It is the first type of situations that calls for and can be resolved by XAI methods. However, to claim that XAI can supply explanations for the second would be currently unrealistic and irresponsible.
 
 # XAI State-of-the-Art (SotA)
 
@@ -203,8 +203,6 @@ For instance, for AI models that approve bank loan, we place such a model within
 
 It is just this agency to act within social roles we place AI models in that does not exist within AI models (yet). If XAI continues to focus its gaze within models rather than looking more broadly to the environment it acts in, we will never be able to find the satisfactory explanations we seek. This is because for our present AI models, they do not contain an awareness of their internal processes nor have the agency to make changes to their model architecture.
 
-# Where Philosophy can help XAI
-
 # Distinguishing between Diagnostics and Explanation
 
 In the last section, we examined the different aspects of explanations and a class of explanations, *social* explanations, that I argue XAI currently cannot satisfactorily produce. I will next argue that it is best to view present techniques of XAI as producing not explanations but diagnostics. Explanations as a social construct should strictly include social agents (humans) in the loop and it would be prudent to treat present results from the field of XAI as mere diagnostic tools to avoid confusion and granting such tools too much authority.
@@ -214,10 +212,6 @@ Not all explanations are established on the basis of diagnostics, though diagnos
 An analogy can be drawn to Air Crash Investigations. In the unfortunate case of airplane accidents, the recovery of the plane's [Flight Recorder](https://en.wikipedia.org/wiki/Flight_recorder) (also known as a black box) is but the first step in forming an investigative report into the accident. The data recorded by flight recorders contain a slice of the plane's flight history, preserving the state of the plane moments before the accident. From this data, investigators may be able to hypothesize what caused the accident by identifying anomalous parameters recorded by the black box. However, in many cases, the causes for airplane accidents do not lie entirely within the plane's state prior to the accident. Rather, the plane exists within the larger context of the flight industry which contains its pilots, maintenance crews, and regulations regarding flight paths and operating procedures. In addition, a key aspect of the final investigative report is to not only identify causes for the accident but recommendations for preventing future accidents from happening. Furthermore, this investigative report also serves to assuage the public of the flight industry's reliability as well as address bereaved families' concerns. In this way, explanations for airplane accidents do not merely contain the causal aspect (which may already exceed the bounds of a plane's black box) but a social aspect of fulfilling the responsibility the flight industry has to its customers.
 
 In a similar fashion, our investigations into AI models must not stop from uncovering what's within the black box (AI models), but to look beyond and place the model within its social context. But to do so, we do indeed still require transparency into the inner workings of our AI models in order to make an informed explanation of its behavior. Rather than expecting that XAI would resolve the problems we have employing AI models in a social context, we should instead acknowledge its present limits to inform what steps we still need to take to move forward.
-
-# Explanations exist outside AI Models
-
-# Current tools of Command Responsibility
 
 # XAI not merely as a way of looking back, but looking forwards
 
@@ -241,8 +235,6 @@ What this awareness should be and how it can be implemented is currently unclear
 
 In time, the XAI movement can not only serve the purpose of examining presently available systems in an effort to *make sense of* how and why they function but could further serve the purpose of pushing us towards truly intelligent systems.
 
-# The Future of XAI
-
 # References
 
 ### Internet References
@@ -252,26 +244,25 @@ In time, the XAI movement can not only serve the purpose of examining presently 
 3. [LabSix, Fooling Neural Networks in the Physical World with 3D Adversarial Objects] https://www.labsix.org/physical-objects-that-fool-neural-nets/
 4. [The Verge, Microsoft Tay twitter chatbot] https://www.theverge.com/2016/3/24/11297050/tay-microsoft-chatbot-racist
 5. [BAIR, Physically Realistic Attacks on Deep RL] https://bair.berkeley.edu/blog/2020/03/27/attacks/
-6. [Command Responsibility Doctrine] https://www.oxfordbibliographies.com/view/document/obo-9780199796953/obo-9780199796953-0088.xml
-7. [WIRED, Move 37 by AlphaGo] https://www.wired.com/2016/03/two-moves-alphago-lee-sedol-redefined-future/
-8. [Google Cloud XAI Whitepaper] https://storage.googleapis.com/cloud-ai-whitepapers/AI%20Explainability%20Whitepaper.pdf
-9. [DeepMind, MuZero: Mastering Go, chess, shogi, and Atari without rules] https://deepmind.com/blog/article/muzero-mastering-go-chess-shogi-and-atari-without-rules
-10. [Falcon Andrea, Aristotle on Causality] https://plato.stanford.edu/entries/aristotle-causality
-11. [Yujin Tang, David Ha, 2020, Using Selective Attention in Reinforcement Learning Agents, Google Research, Tokyo] https://ai.googleblog.com/2020/06/using-selective-attention-in.html
+6. [WIRED, Move 37 by AlphaGo] https://www.wired.com/2016/03/two-moves-alphago-lee-sedol-redefined-future/
+7. [Google Cloud XAI Whitepaper] https://storage.googleapis.com/cloud-ai-whitepapers/AI%20Explainability%20Whitepaper.pdf
+8. [DeepMind, MuZero: Mastering Go, chess, shogi, and Atari without rules] https://deepmind.com/blog/article/muzero-mastering-go-chess-shogi-and-atari-without-rules
+9. [Falcon Andrea, Aristotle on Causality] https://plato.stanford.edu/entries/aristotle-causality
+10. [Yujin Tang, David Ha, 2020, Using Selective Attention in Reinforcement Learning Agents, Google Research, Tokyo] https://ai.googleblog.com/2020/06/using-selective-attention-in.html
 
 ### Academic Papers
 
-12. [Philip G. Breen, Christopher N. Foley, Tjarda Boekholt, Simon Portegies Zwart, 2019, Newton vs the machine: solving the chaotic three-body problem using deep neural networks](https://arxiv.org/pdf/1910.07291.pdf)
-13. [Giulia Vilone, Luca Longo, 2020, Explanable Artificial Intelligence: a Systematic Review](https://arxiv.org/pdf/2006.00093.pdf)
-14. [Woo-Jeoung Nam, Shir Gur, Jaesik Choi, Lior Wolf, Seong-Whan Lee, 2019, Relative Attributing Propagation: Interpreting the Comparative Contributions of Individual Units in Deep Neural Networks](https://arxiv.org/pdf/1904.00605.pdf)
-15. [Rishabh Agarwal, Nicholas Frosst, Xuezhou Zhang, Rich Caruana, Geoffrey E. Hinton, 2020, Neural Additive Models: Interpretable Machine Learning with Neural Nets](https://arxiv.org/pdf/2004.13912.pdf)
-16. [Rudin 2019: Stop Explaining Black Box Machine Learning Models for High Stakes Decisions and Use Interpretable Models instead](https://arxiv.org/pdf/1811.10154.pdf)
-17. [Tania Lombrozo, 2006, The structure and function of explanations](https://www.sciencedirect.com/science/article/pii/S1364661306002117)
-18. [Tim Miller, 2018, Explanation in Artificial Intelligence: Insights from the Social Sciences](https://arxiv.org/pdf/1706.07269.pdf)
-19. [Jay F. Rosenberg, 1990, Connectionism and Cognition](https://philosophy.tamucc.edu/graphics/berkich/texts/rosenberg_jay-connectionism_and_cognition.pdf)
-20. [Michael A. Alcorn, Qi Li, Zhitao Gong, Chengfei Wang, Long Mai, Wei-Shinn Ku, Anh Nguyen, 2019, Strike (with) a Pose: Neural Networks Are Easily Fooled by Strange Poses of Familiar Objects](https://arxiv.org/pdf/1811.11553.pdf)
-21. [Nick Bostrom, 2002, Existential Risks, *Journal of Evolution and Technology*, Vol. 9, No. 1](https://www.nickbostrom.com/existential/risks.html)
-22. [Lisa Anne Hendricks, Zeynep Akata, Marcus Rohrbach, Jeff Donahue, Bernt Schiele, Trevor Darrell, 2016, Generating Visual Explanations](https://arxiv.org/pdf/1603.08507v1.pdf)
+11. [Philip G. Breen, Christopher N. Foley, Tjarda Boekholt, Simon Portegies Zwart, 2019, Newton vs the machine: solving the chaotic three-body problem using deep neural networks](https://arxiv.org/pdf/1910.07291.pdf)
+12. [Giulia Vilone, Luca Longo, 2020, Explanable Artificial Intelligence: a Systematic Review](https://arxiv.org/pdf/2006.00093.pdf)
+13. [Woo-Jeoung Nam, Shir Gur, Jaesik Choi, Lior Wolf, Seong-Whan Lee, 2019, Relative Attributing Propagation: Interpreting the Comparative Contributions of Individual Units in Deep Neural Networks](https://arxiv.org/pdf/1904.00605.pdf)
+14. [Rishabh Agarwal, Nicholas Frosst, Xuezhou Zhang, Rich Caruana, Geoffrey E. Hinton, 2020, Neural Additive Models: Interpretable Machine Learning with Neural Nets](https://arxiv.org/pdf/2004.13912.pdf)
+15. [Rudin 2019: Stop Explaining Black Box Machine Learning Models for High Stakes Decisions and Use Interpretable Models instead](https://arxiv.org/pdf/1811.10154.pdf)
+16. [Tania Lombrozo, 2006, The structure and function of explanations](https://www.sciencedirect.com/science/article/pii/S1364661306002117)
+17. [Tim Miller, 2018, Explanation in Artificial Intelligence: Insights from the Social Sciences](https://arxiv.org/pdf/1706.07269.pdf)
+18. [Jay F. Rosenberg, 1990, Connectionism and Cognition](https://philosophy.tamucc.edu/graphics/berkich/texts/rosenberg_jay-connectionism_and_cognition.pdf)
+19. [Michael A. Alcorn, Qi Li, Zhitao Gong, Chengfei Wang, Long Mai, Wei-Shinn Ku, Anh Nguyen, 2019, Strike (with) a Pose: Neural Networks Are Easily Fooled by Strange Poses of Familiar Objects](https://arxiv.org/pdf/1811.11553.pdf)
+20. [Nick Bostrom, 2002, Existential Risks, *Journal of Evolution and Technology*, Vol. 9, No. 1](https://www.nickbostrom.com/existential/risks.html)
+21. [Lisa Anne Hendricks, Zeynep Akata, Marcus Rohrbach, Jeff Donahue, Bernt Schiele, Trevor Darrell, 2016, Generating Visual Explanations](https://arxiv.org/pdf/1603.08507v1.pdf)
 
 # Authors
 
