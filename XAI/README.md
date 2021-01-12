@@ -61,7 +61,7 @@ The class of tasks surrounding image classification has received much attention 
 </p>
 <p align="center"><strong>Figure 1:</strong> Panda obfusicated with noise produces Gibbon. <a href="https://openai.com/blog/adversarial-example-research/">Source</a></p>
 
-In the above example, a distributed pattern of noise is overlayed onto the original image and tricks the model into classifying the modified image as a high-probability gibbon. Furthermore, it is possible to print out such adversarial images or construct an adversarial 3D model and robustly trick models from different angles ([case of a turtle model misidentified as a gun](https://www.theverge.com/2017/11/2/16597276/google-ai-image-attacks-adversarial-turtle-rifle-3d-printed)).
+In the above example, a distributed pattern of noise is overlayed onto the original image and tricks the model into classifying the modified image as a high-probability gibbon. Furthermore, it is possible to print out such adversarial images or construct an adversarial 3D model and robustly trick models from different angles ([LabSix, Turtle 3D model adversary](https://www.labsix.org/physical-objects-that-fool-neural-nets/)).
 
 There is also growing concern that Deep CNNs used in most image classifiers are not sufficiently robust for current applications. A study by Michael et.al highlighted that Deep CNNs are unable to generalize pose of image objects when they differ from canonical poses that the CNN has been trained on [[Michael et.al, 2019](https://arxiv.org/pdf/1811.11553.pdf)].
 
@@ -147,6 +147,8 @@ Rather than examining what input features were relevant to the model output, som
 
 With the success of selective attention in Natural Language Processing models using the Transformer architecture, this technique has been applied to reinforcement agents as well in a recent study by Google Research, Tokyo [[Yujin et.al, 2020](https://ai.googleblog.com/2020/06/using-selective-attention-in.html)]. Here, an additional step is introduced to select sections of the input image before it is presented to the reinforcement agent. The paper reports that not only is the trained Attention Agent out-performing existing models, it can also generalize to unseen environments better than existing methods.
 
+## Explanatory v.s. Interpretable AI
+
 An alternative to asking post-hoc questions is to modify our models themselves to function in a way that is 'self-explanatory'. This approach as applied in the Attention Agent example is typically referenced as interpretable AI rather than explanable AI. There is pressure for XAI to move away from problematic post-hoc explanations. In her widely cited 2019 paper, Cynthia Rudin writes that "trying to *explain* black box models, rather than creating models that are *interpretable* in the first place, is likely to perpetuate bad practices and can potentially cause catastrophic harm to society". She points out 2 main reasons similar to what we have criticized the above two approaches for [[Rudin, 2019](https://arxiv.org/pdf/1811.10154.pdf)]:
 
 1. Explainable ML methods provide explanations that are not faithful to what the original model computes
@@ -177,17 +179,6 @@ Google's Cloud Explainable AI offers 3 main services: AI Explanations, What-If T
 Rather than simply statically identifying the salient features in a model's prediction, the [What-If Tool](https://pair-code.github.io/what-if-tool/index.html#demos) allows one to modify datapoints and introduce what-if sample points to observe the examined model's predictions. This is an interactive tool that can be deployed after a model has been trained and serve as a way of visualizing how the model performs on different datasets. Lastly, the [Continuous evaluation tool](https://cloud.google.com/ai-platform/prediction/docs/continuous-evaluation) monitors a deployed model by sampling datapoints against human-evaluated results. For example, a model can be queried with an image classification request and the same image is sent to the deployed AI model as well as human evaluators. The results from the model is then compared against human evaluation responses and reported intermittently.
 
 Google's Explainable AI takes a promising step by shifting focus from the raw numbers to interaction with human evaluators of the model. Explanations as per this tool is driven not only by mathematical tools employed to extract pertinent features relevant to model predictions but through interactions with human questioners. However, at its core, such a product is still driven by a post-hoc approach: treating models as something akin to an engine and examining mechanistic details within them to produce 'explanations'.
-
-## Explanatory v.s. Interpretable AI
-
-There is pressure for XAI to move away from asking post-hoc questions to modifying our models themselves to function in a way that is 'self-explanatory', in other words, for us to prefer interpretable AI rather than explanatory AI. In her widely cited 2019 paper, Cynthia Rudin writes that "trying to *explain* black box models, rather than creating models that are *interpretable* in the first place, is likely to perpetuate bad practices and can potentially cause catastrophic harm to society". She points out 2 main reasons for her assessment [[Rudin, 2019](https://arxiv.org/pdf/1811.10154.pdf)]:
-
-1. Explainable ML methods provide explanations that are not faithful to what the original model computes
-2. Explanations often do not make sense, or do not provide enough detail to understand what the black box is doing
-
-The first point highlights the pitfall that by constructing tools which help reveal *some* inner working of the black box model, we are not guaranteed to find *the* inner workings which are pertinent in the model's decision processes. There are many ways in which salient features can be identified from model output and inputs. Google's product utilizes a Sampled Shapley measure, many alternatives exist in research literature and it has been pointed out that we currently do not have a good way to evaluate which saliency measure should be preferred [[Giulia et.al, 2020](https://arxiv.org/pdf/2006.00093.pdf)].
-
-The second point is hinted at within Google's whitepaper: "Similar to how model predictions are prone to adversarial attacks, attributions are prone to the same". Even with attributions at hand, comparing between attributions given for a correct classification versus an incorrect classification may reveal no useful differences in what salient features have been identified. Alternatively, two different sets of salient features may be identified for the same classification problem instance. Once again this makes us question just what such saliency information provides us with other than perhaps confirming some preconceived human bias as to what should have been pertinent features decision process needs to take into account.
 
 # What is an Explanation? - Perspectives from Philosophy
 
@@ -257,12 +248,12 @@ In time, the XAI movement can not only serve the purpose of examining presently 
 ### Internet References
 
 1. [AlphaFold] https://www.nature.com/articles/d41586-020-03348-4
-2. [Panda-gibbon image adversary] https://openai.com/blog/adversarial-example-research/
-3. [Microsoft Tay twitter chatbot] https://www.theverge.com/2016/3/24/11297050/tay-microsoft-chatbot-racist
-4. [RL goalie adversarial attack] https://bair.berkeley.edu/blog/2020/03/27/attacks/
-5. [Selective Attention Agent] https://ai.googleblog.com/2020/06/using-selective-attention-in.html
+2. [OpenAI, Panda-gibbon image adversary] https://openai.com/blog/adversarial-example-research/
+3. [LabSix, Fooling Neural Networks in the Physical World with 3D Adversarial Objects] https://www.labsix.org/physical-objects-that-fool-neural-nets/
+4. [The Verge, Microsoft Tay twitter chatbot] https://www.theverge.com/2016/3/24/11297050/tay-microsoft-chatbot-racist
+5. [BAIR, Physically Realistic Attacks on Deep RL] https://bair.berkeley.edu/blog/2020/03/27/attacks/
 6. [Command Responsibility Doctrine] https://www.oxfordbibliographies.com/view/document/obo-9780199796953/obo-9780199796953-0088.xml
-7. [Move 37 by AlphaGo] https://www.wired.com/2016/03/two-moves-alphago-lee-sedol-redefined-future/
+7. [WIRED, Move 37 by AlphaGo] https://www.wired.com/2016/03/two-moves-alphago-lee-sedol-redefined-future/
 8. [Google Cloud XAI Whitepaper] https://storage.googleapis.com/cloud-ai-whitepapers/AI%20Explainability%20Whitepaper.pdf
 9. [DeepMind, MuZero: Mastering Go, chess, shogi, and Atari without rules] https://deepmind.com/blog/article/muzero-mastering-go-chess-shogi-and-atari-without-rules
 10. [Falcon Andrea, Aristotle on Causality] https://plato.stanford.edu/entries/aristotle-causality
@@ -270,17 +261,17 @@ In time, the XAI movement can not only serve the purpose of examining presently 
 
 ### Academic Papers
 
-11. [Philip G. Breen, Christopher N. Foley, Tjarda Boekholt, Simon Portegies Zwart, 2019, Newton vs the machine: solving the chaotic three-body problem using deep neural networks](https://arxiv.org/pdf/1910.07291.pdf)
-12. [Giulia Vilone, Luca Longo, 2020, Explanable Artificial Intelligence: a Systematic Review](https://arxiv.org/pdf/2006.00093.pdf)
-13. [Woo-Jeoung Nam, Shir Gur, Jaesik Choi, Lior Wolf, Seong-Whan Lee, 2019, Relative Attributing Propagation: Interpreting the Comparative Contributions of Individual Units in Deep Neural Networks](https://arxiv.org/pdf/1904.00605.pdf)
-14. [Rishabh Agarwal, Nicholas Frosst, Xuezhou Zhang, Rich Caruana, Geoffrey E. Hinton, 2020, Neural Additive Models: Interpretable Machine Learning with Neural Nets](https://arxiv.org/pdf/2004.13912.pdf)
-15. [Rudin 2019: Stop Explaining Black Box Machine Learning Models for High Stakes Decisions and Use Interpretable Models instead](https://arxiv.org/pdf/1811.10154.pdf)
-16. [Tania Lombrozo, 2006, The structure and function of explanations](https://www.sciencedirect.com/science/article/pii/S1364661306002117)
-17. [Tim Miller, 2018, Explanation in Artificial Intelligence: Insights from the Social Sciences](https://arxiv.org/pdf/1706.07269.pdf)
-18. [Jay F. Rosenberg, 1990, Connectionism and Cognition](https://philosophy.tamucc.edu/graphics/berkich/texts/rosenberg_jay-connectionism_and_cognition.pdf)
-19. [Michael A. Alcorn, Qi Li, Zhitao Gong, Chengfei Wang, Long Mai, Wei-Shinn Ku, Anh Nguyen, 2019, Strike (with) a Pose: Neural Networks Are Easily Fooled by Strange Poses of Familiar Objects](https://arxiv.org/pdf/1811.11553.pdf)
-20. [Nick Bostrom, 2002, Existential Risks, *Journal of Evolution and Technology*, Vol. 9, No. 1](https://www.nickbostrom.com/existential/risks.html)
-21. [Lisa Anne Hendricks, Zeynep Akata, Marcus Rohrbach, Jeff Donahue, Bernt Schiele, Trevor Darrell, 2016, Generating Visual Explanations](https://arxiv.org/pdf/1603.08507v1.pdf)
+12. [Philip G. Breen, Christopher N. Foley, Tjarda Boekholt, Simon Portegies Zwart, 2019, Newton vs the machine: solving the chaotic three-body problem using deep neural networks](https://arxiv.org/pdf/1910.07291.pdf)
+13. [Giulia Vilone, Luca Longo, 2020, Explanable Artificial Intelligence: a Systematic Review](https://arxiv.org/pdf/2006.00093.pdf)
+14. [Woo-Jeoung Nam, Shir Gur, Jaesik Choi, Lior Wolf, Seong-Whan Lee, 2019, Relative Attributing Propagation: Interpreting the Comparative Contributions of Individual Units in Deep Neural Networks](https://arxiv.org/pdf/1904.00605.pdf)
+15. [Rishabh Agarwal, Nicholas Frosst, Xuezhou Zhang, Rich Caruana, Geoffrey E. Hinton, 2020, Neural Additive Models: Interpretable Machine Learning with Neural Nets](https://arxiv.org/pdf/2004.13912.pdf)
+16. [Rudin 2019: Stop Explaining Black Box Machine Learning Models for High Stakes Decisions and Use Interpretable Models instead](https://arxiv.org/pdf/1811.10154.pdf)
+17. [Tania Lombrozo, 2006, The structure and function of explanations](https://www.sciencedirect.com/science/article/pii/S1364661306002117)
+18. [Tim Miller, 2018, Explanation in Artificial Intelligence: Insights from the Social Sciences](https://arxiv.org/pdf/1706.07269.pdf)
+19. [Jay F. Rosenberg, 1990, Connectionism and Cognition](https://philosophy.tamucc.edu/graphics/berkich/texts/rosenberg_jay-connectionism_and_cognition.pdf)
+20. [Michael A. Alcorn, Qi Li, Zhitao Gong, Chengfei Wang, Long Mai, Wei-Shinn Ku, Anh Nguyen, 2019, Strike (with) a Pose: Neural Networks Are Easily Fooled by Strange Poses of Familiar Objects](https://arxiv.org/pdf/1811.11553.pdf)
+21. [Nick Bostrom, 2002, Existential Risks, *Journal of Evolution and Technology*, Vol. 9, No. 1](https://www.nickbostrom.com/existential/risks.html)
+22. [Lisa Anne Hendricks, Zeynep Akata, Marcus Rohrbach, Jeff Donahue, Bernt Schiele, Trevor Darrell, 2016, Generating Visual Explanations](https://arxiv.org/pdf/1603.08507v1.pdf)
 
 # Authors
 
