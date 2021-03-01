@@ -50,12 +50,15 @@ Here's a collection of relatively famous Psychological experiments and one-liner
     - Usually translates to more recent or immediate events.
     - Frequency in memory ~ p(event) [fallacy]
 
+- [Representativeness Heuristic](https://en.wikipedia.org/wiki/Representativeness_heuristic): Matching the perceived event to our preconceived notion of prototypically similar events.
+    - Judged as more similar => more probable [fallacy]
+
 - [Framing Effect](https://en.wikipedia.org/wiki/Framing_effect_(psychology)): When two objectively identical (results-oriented) decisions are framed differently (linguistically), subjects' decisions differ systematically.
     - e.g. Risk loom larger than losses (positivity framing -> risk adverse | negativity framing -> risk tolerant): We tend to take risky options to avoid something framed as a 'loss' when in fact the options presented to us result in identical outcomes.
 
 - [Conjunction Fallacy](https://en.wikipedia.org/wiki/Conjunction_fallacy): We judge a more specific event to be more probable than the general event.
     - We think: p(Linda is Bank Teller & Linda is active in feminist movement) > p(Linda is Bank Teller).
-    - Explanation due to availability heuristic or a matching to our preconceived notion of 'Linda'.
+    - Explanation due to availability heuristic or representativeness heuristic.
     - When explicitly presented as a *frequency* evaluation (e.g. How many out of 100 people will fit the following descriptions?), this effect is significantly attenuated.
 
 - [Affective Forecasting](https://en.wikipedia.org/wiki/Affective_forecasting): We *think* we are pretty good judges of our emotions under hypothetical situations but we're likely not.
