@@ -7,7 +7,9 @@ Part blog, part experiment in using software collaboration tool for written work
 # Table of Contents
 
 - [XAI](/XAI) [work-in-progress]
-  - [Limits of XAI](/XAI/limits-of-xai.md)
+    - [Limits of XAI](/XAI/limits-of-xai.md)
+- [Knowledge Nuggets](/Tidbits)
+    - [Psychology](/Tidbits/Psych)
 
 # Disclaimer
 
