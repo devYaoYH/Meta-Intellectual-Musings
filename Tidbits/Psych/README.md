@@ -6,16 +6,16 @@ Firstly, there are some recurring themes in psychology where two sides of a coin
 
 ### System 1 v.s. System 2
 Or also known as the [Dual Process Theory](https://en.wikipedia.org/wiki/Dual_process_theory): Cognitive processes proceed along two simultaneous pathways: one automatic, unconscious, fast, low-effort (System 1); the other explicit, conscious, slow, high-effort (System 2).
-    - Applied generally to a broad range of psychological settings where changing the timescale of a decision process/experiment changes the subjects' responses systematically. E.g. Linguistic association tasks, memory recall, learning, social appraisal (of situations/others)...
+- Applied generally to a broad range of psychological settings where changing the timescale of a decision process/experiment changes the subjects' responses systematically. E.g. Linguistic association tasks, memory recall, learning, social appraisal (of situations/others)...
 
 ### Nature v.s. Nurture
 How much of our behavior/cognition is the result of pre-determined biological factors (genetics for instance - although not entirely true, see body of research on environmental regulation of gene expression) or experience-driven developmental factors.
-    - The debate in language between Chomsky (Nature) and Skinner (Nurture) looms big on psychology.
+- The debate in language between Chomsky (Nature) and Skinner (Nurture) looms big on psychology.
 
 ### Individualism v.s. Collectivism
 When cross-cultural studies are conducted, a common dimension to explain differences along is how Individualist v.s. Collectivist the communities under study generally are. Where Western communities are believed to be predominantly individualist, Eastern communities are believed to be predominantly collectivist.
-    - [Individualism](https://en.wikipedia.org/wiki/Individualism): Emphasis on worth of individual choices/value/traits/interests
-    - [Collectivism](https://en.wikipedia.org/wiki/Collectivism): Emphasis on cohesion within social group
+- [Individualism](https://en.wikipedia.org/wiki/Individualism): Emphasis on worth of individual choices/value/traits/interests
+- [Collectivism](https://en.wikipedia.org/wiki/Collectivism): Emphasis on cohesion within social group
 
 ## Problems in psychology
 
