@@ -48,7 +48,7 @@ Here's a collection of relatively famous Psychological experiments and one-liner
 
 - [Availability Heuristic](https://en.wikipedia.org/wiki/Availability_heuristic): When making probabilistic judgements, we weigh easily recallable events with higher probability.
     - Usually translates to more recent or immediate events.
-    - Frequency in memory ~ p(event) [fallacy]
+    - Ease of recall ~ p(event) [fallacy]
 
 - [Representativeness Heuristic](https://en.wikipedia.org/wiki/Representativeness_heuristic): Matching the perceived event to our preconceived notion of prototypically similar events.
     - Judged as more similar => more probable [fallacy]
@@ -68,3 +68,31 @@ Here's a collection of relatively famous Psychological experiments and one-liner
 - [Change Blindness](https://en.wikipedia.org/wiki/Change_blindness): We are overconfident in our perception of changes to the environment.
     - When we attend to spcific tasks, usually other irrelevant changes in the stimuli are ignored. However, subjects are nonetheless confident in their ability to identify changes if there were in fact changes (there are, and subjects did not notice them).
     - [Example task](https://www.youtube.com/watch?v=IGQmdoK_ZfY): Did you notice the change?
+
+- [Cognitive Dissonance](https://en.wikipedia.org/wiki/Cognitive_dissonance): We seek consistency between our internal beliefs and external behavior. When actions' resultant or anticipatory effect conflicts with our beliefs, we seek to reestablish consistency by changing attitudes or behaviors.
+    - Can be used to explain the 'sunk cost' fallacy when action taken cannot be changed, adjusted attitude results in continued investment
+    - Initial Investment -> Anticipated negative appraisal -> Adjustment of attitudes to reestablish consistency
+
+- Dual-Process Models for Persuation: The two prominent theories are highly similar ([Heuristic-Systematic](https://en.wikipedia.org/wiki/Heuristic-systematic_model_of_information_processing) and [Elaboration-Likelihood](https://en.wikipedia.org/wiki/Elaboration_likelihood_model)). Depending on how invested we are in the issue at hand and how intelligeble is the persuasive message, we may employ either a Systematic/Central or Heuristic/Peripheral stance towards evaluating the persuasiveness of the message.
+    - Systematic/Central Stance (High motivation on issue): Quality of Argument
+    - Heuristic/Peripheral Stance (Low motivation on issue): Who is delivering the message, number/length of arguments.
+
+- [Prevention-Detection Persuation framing](https://link.springer.com/article/10.1007/s10865-018-9972-1): "Depending on the behavioural function (prevention or detection of illness), either a **gain-frame (for preventive action)** or a **loss-frame (for detection behaviour)** is theorized to be more persuasive. The idea behind the interaction between message frame and behavioural function is rooted in prospect theory (Kahneman & Tversky, 1979), whereby preferences for one of two choices are different, depending upon how these outcomes are framed, even though the factual outcomes are equal." (Brujin, 2018, *emphasis mine*)
+
+- [Solomon Asch Conformity Experiment](https://en.wikipedia.org/wiki/Asch_conformity_experiments): When presented with systematic group responses, an individual may shift personal responses to conform with the group.
+    - Initial famous experiment presented a group of confederates and only 1 actual participant (who answered last) with a series of line-length similarity judgements (which line A,B,C is most similar in length to this one?).
+    - When confederates give consistently poor estimates, after a few trials, subject also gave similarly poor estimates.
+    - In follow-up experiments, this observed conformity effect is largely attenuated when subject gives private written responses even after listening to group response. (publically-perceived behavior drives this effect)
+    - *Normative Influence*: When the right answer is known clearly but individual may agree to group on basis of conforming to perceived social norms.
+    - *Informative Influence*: When the right answer is hard to determine, individual may agree to group on basis of belief that the group has privileged information.
+
+- [Compliance Strategies]: Strategies for increasing successful compliance from others to a given request
+    - [Foot-in-the-door](https://en.wikipedia.org/wiki/Foot-in-the-door_technique): Make an initial small request before the targeted request
+    - [Door-in-the-face](https://en.wikipedia.org/wiki/Door-in-the-face_technique): Make an initial huge request before the (perceived more reasonable) targeted request (only works if the same individual issues both requests)
+
+- [Mere Exposure Effect](https://en.wikipedia.org/wiki/Mere-exposure_effect): Mere increased exposure to something increases our liking or preference for that thing.
+    - [Festinger MIT Dormitory Studies](https://en.wikipedia.org/wiki/Proximity_principle): Evidence for this effect in the domain of forming friendships. Families who live closer to each other in the study have increased chance of forming friendships.
+    - Linguistic preference: More frequent words in English are judged to be more preferrable.
+    - Potential explanations:
+        - Anticipated interactions can increase liking.
+        - Repeated exposure to stimulus makes it easier to be processed, which has a positive feedback effect.
