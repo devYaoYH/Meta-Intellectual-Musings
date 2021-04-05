@@ -86,7 +86,7 @@ Here's a collection of relatively famous Psychological experiments and one-liner
     - *Normative Influence*: When the right answer is known clearly but individual may agree to group on basis of conforming to perceived social norms.
     - *Informative Influence*: When the right answer is hard to determine, individual may agree to group on basis of belief that the group has privileged information.
 
-- [Compliance Strategies]: Strategies for increasing successful compliance from others to a given request
+- Compliance Strategies: Strategies for increasing successful compliance from others to a given request
     - [Foot-in-the-door](https://en.wikipedia.org/wiki/Foot-in-the-door_technique): Make an initial small request before the targeted request
     - [Door-in-the-face](https://en.wikipedia.org/wiki/Door-in-the-face_technique): Make an initial huge request before the (perceived more reasonable) targeted request (only works if the same individual issues both requests)
 
