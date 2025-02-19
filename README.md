@@ -9,6 +9,7 @@ Part blog, part experiment in using software collaboration tool for written work
 - [XAI](/XAI)
     - [Limits of XAI](/XAI/limits-of-xai.md) (Short article)
     - [Explanatory Pluralism in Explainable AI](https://arxiv.org/abs/2106.13976) (Conference Paper - preprint)
+- [AI Alignment](/AI_Alignment)
 - [Knowledge Nuggets](/Tidbits)
     - [Psychology](/Tidbits/Psych)
 
